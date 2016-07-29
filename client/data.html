@@ -22,7 +22,7 @@
    <meta property="og:type" content="article"/>
    <meta property="og:title" content="Private jets uncovered: See methodology behind the numbers"/>
    <meta property="og:description" content="The FT analysed more than a thousand securities filings to look into this contentious practice. Find out how the dataset came to be." />
-   <meta property="og:image:url" content="https://image.webservices.ft.com/v1/images/raw/ftcms:86fa4a3a-e13b-11e5-9217-6ae3733a2cd1?source=ig"/>
+   <meta property="og:image:url" content="https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fig.ft.com%2Fstatic%2Fother%2Fboardroom.jpg?source=Dreamstime"/>
    <meta property="fb:page_id" content="8860325749" />
    <meta name="format-detection" content="telephone=no" />
    <meta name="twitter:card" content="summary_large_image">
@@ -30,9 +30,9 @@
    <meta name="twitter:creator" content="@ftdata">
    <meta name="twitter:title" content="Private jets uncovered: See methodology behind the numbers">
    <meta name="twitter:description" content="The FT analysed more than a thousand securities filings to look into this contentious practice. Find out how the dataset came to be.">
-   <meta name="twitter:image" content="https://image.webservices.ft.com/v1/images/raw/ftcms:86fa4a3a-e13b-11e5-9217-6ae3733a2cd1?source=ig">
+   <meta name="twitter:image" content="https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fig.ft.com%2Fstatic%2Fother%2Fboardroom.jpg?source=Dreamstime">
     <link rel="canonical" href="https://ig.ft.com/sites/business-jets/data.html">
-    <link rel="image_src" href="https://image.webservices.ft.com/v1/images/raw/ftcms:86fa4a3a-e13b-11e5-9217-6ae3733a2cd1?source=ig">
+    <link rel="image_src" href="https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fig.ft.com%2Fstatic%2Fother%2Fboardroom.jpg?source=Dreamstime">
 
 
     <script src="scripts/top.js"></script>
@@ -74,56 +74,45 @@
     </header>
 
     <main role="main">
-      <h1>How the FT compiled a database on aircraft perks at the biggest US-listed companies</h1>
+      <h1>How the FT analysed global board composition</h1>
       <hr>
-      <h2>The Financial Times has published <a class="standfirst-link" href="./">an article</a> opening a window on to the world of corporate jets benefits, a practice that cost S&amp;P 500 companies nearly $40m in 2014</h2>
+      <h2>The Financial Times has published an article breaking down the age, tenure and gender ratio of more than 5,100 boards. Here's how.</h2>
       <article>
-      <h3>About the data</h3>
-      <p>To compile this database on executives’ personal use of company planes, the Financial Times manually inspected nearly a thousand company filings to the US Securities and Exchange Commission. We looked at annual proxy filings (also known as DEF 14A filings) of S&amp;P 500 companies across two financial years (2013 and 2014).</p>
-      <p>Where a DEF 14A filing was not available (for example because of mergers and acquisitions activity), we looked for other proxy statements filed by the company that contained the information, such as PRE 14A statements.</p>
-      <p>To ease the process of finding all the filings, we used the SEC’s file transfer protocol server for its Edgar electronic filing system to download an index of all the filings in the time period we were looking for. We then used R, the statistical programming language, to filter that index and compile a list of URLs for the filings we were interested in.
-      For our analysis, we included only the 465 companies that were in the S&amp;P 500 from January 1, 2014 to December 31, 2015 (the period during which the proxy statements we examined were filed). As SEC regulations do not require companies to disclose the value of personal use of corporate aircraft by a named executive if it is less than $25,000, we discarded any voluntary disclosure of aircraft benefits that were below that threshold.</p>
-      <p>That left us with 322 executives across 184 companies.</p>
-      <p>We entered the data into a Google spreadsheet and wrote a script using R to conduct our analysis. This identified the top spenders in 2013 and 2014, as well as the fact that the distribution of jet spending was skewed, with a handful of companies accounting for a large proportion of total spending. The script also compared spending in 2013 with 2014, looked at the data by industry, gender of the executive and geographic location of companies’ headquarters.</p>
-      <p>We delved deeper into the spending history of the top 10 companies by looking at their filings going back a decade to 2006. Read the <a href="https://github.com/ft-interactive/jets/blob/master/RScripts%20and%20data/companyresponses.csv" target="_blank">companies’ responses</a> to our findings on this project's Github page.</p>
+      <h3>About the data</h3>      
+      <p>To analyse the composition of boards around the world, the Financial Times used data provided by ISS Analytics, Powered by DataDesk, covering more than 46,000 directors across 5,116 companies in 29 countries.</p>
+      <p>The data is a part of Institutional Shareholder Services' QuickScore report, designed to help investors identify governance risk within portfolio companies.</p>
+      <p>The database includes companies in the US’s Russell 3000 and S&P 500, Canada’s S&P/TSX Composite, New Zealand’s NZX15, Australia’s ASX 200 and Europe’s STOXX600 in addition to local European market indices such as the UK FTSE All-Share. It also includes “widely held” companies in Brazil, China, Hong Kong, India, Japan, Singapore, South Africa and South Korea. ISS defines “widely held” based on a company's membership in a major index and/or the number of ISS clients holding the company’s stock.</p>
+      <p>The data provided included each director’s names, age, tenure, gender, committee membership, independence classification, title and industry, among other fields. Ages and tenures were missing on about 4 per cent of entries and were primarily from directors in Greece, Australia, Germany and New Zealand.</p>
+      <p>An FT survey of the data showed about 80 per cent of the largest 200 global companies were included in the database. The vast majority of companies that were not included were Chinese.</p>
+      
       </article>
        <div class="link-container">
-        <p class="factoid-link"><a class="page-links" href="nine-facts.html">Nine facts about corporate jet perks</a></p>
-        <p class="story-link"><a class="page-links" href="./">To main story</a></p>
+         <p class="story-link"><a class="page-links" href="./">To main story</a></p>
         </div>
-
-      <section>
-        <h3>Footnotes</h3>
-             <ul>
-          <li>There is no data available for Mylan in 2014 because the company did not file a proxy statement with that information that year.</li>
-          <li>The amounts quoted for Humana and Duke Energy overstate the value of spending on aircraft benefits when compared with other companies in our database. Both Humana and Duke Energy included the value of disallowed corporate income tax deductions in their reported figure. Other companies either explicitly excluded that amount, or did not make clear whether that cost was included. While Humana and Duke Energy said they included that amount, they did not break out the value of the disallowed deduction, so we were not able to exclude that from our calculations.</li>
-          <li>The amount quoted for CBS executives overstates the value of aircraft benefits, because the figure reported by CBS is for “transportation-related benefits” and includes the cost for a personal car and driver. Other companies report car and plane benefits separately.  
-        </ul>
-       
-      </section>
 
       <section>
         <div class="hide-download-data">
         <h3>Download the data</h3>
+        <p>CSV files from ISS Analytics. Data as of June 2016.</p>
         <div class="download-data-container">
-        <a href="jetdata.csv" download="FTjetdata.csv"><img class="download-csv"src="assets/csv file icon.svg" alt="csv file icon"></a>
-        <p class="download-text">Click to download the full data set as a .csv file. It includes information on the value of personal use of corporate aircraft benefits for each individual in 2013 and 2014, as well as links to the individual Securities and Exchange Commission filings that are the source of that information.</p>
+        <a href="companyboards.csv" download="FTboarddata.csv"><img class="download-csv"src="assets/csv file icon.svg" alt="csv file icon"></a>
+        <p class="download-text"><b>Company board data</b><br>Covers 5,116 widely held companies from 29 countries. Includes board size, average age, average tenure, number of women and market cap.</p>
+        <div class="download-data-container">
+        <a href="companydirectors.csv" download="FTdirectordata.csv"><img class="download-csv"src="assets/csv file icon.svg" alt="csv file icon"></a>
+        <p class="download-text"><b>Director data</b><br>Covers roughly 46,000 directors from widely held companies in 29 countries. Includes directors' current age, tenure and gender.</p>
        </div>
-     </div>
-       <div class="github-link">
-           <p class="story-link"><a class="page-links" href="https://github.com/ft-interactive/jets" target="_blank">Visit our Github page to download the source code for this story</a></p>
        </div>
-    
-        </div>
-      </section>
-      <div class = 'sortable-table-container'>
+       </div>
+
+       <div class = 'sortable-table-container'>
         <section>
-        <h3>Explore the full data set</h3>
+        <h3 text-align="center">Explore reduced company data set</h3>
          </section>
         <div>
-          <iframe frameborder="0" height="9300" scrolling="no" src="https://ig.ft.com/widgets/sortable-table/v2/table.html#filter=1&id=1mXHAcZQjj9Hy3oKwaXwXrKUAv-5xH7zxQ6Sdjw-lnXo" width="100%"><!--.--></iframe>
+          <iframe frameborder="0" height="116800" scrolling="no" src="https://next.ft.com/ig/widgets/sortable-table/v2/table.html#id=1kyHeZ9Gr-WgOq3KZTceUznzFBva2kDt9OB7hFY-iQs8" width="100%"><!--.--></iframe>
         </div>
       </div>
+
 
     </main>
 

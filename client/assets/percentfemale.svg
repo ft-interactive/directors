@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="webchart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 413" style="enable-background:new 0 0 600 413;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#3B3D3B;}
+	.st2{font-family:'Metric-Regular';}
+	.st3{font-size:25px;}
+	.st4{fill:#6B6E68;}
+	.st5{font-size:18px;}
+	.st6{font-size:14px;}
+	.st7{fill:#DACFC5;}
+	.st8{fill:none;stroke:#C3BCB0;stroke-dasharray:1,2;}
+	.st9{font-family:'Metric-Semibold';}
+	.st10{fill:none;stroke:#9BA497;stroke-dasharray:1,0;}
+	.st11{fill:#A5526A;}
+	.st12{fill:#9E2F50;}
+</style>
+<rect class="st0" width="600" height="400"/>
+<g id="webheader">
+	<text transform="matrix(1 0 0 1 10 31)" class="st1 st2 st3">US proportion of female directors lags Europe</text>
+	<text transform="matrix(1 0 0 1 10 56.5)" class="st4 st2 st5">Female directors in widely held companies (%)</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 10 408.1812)" class="st4 st2 st6">Source: FT analysis of ISS Analytics data</text>
+	<g transform="translate(571,384)">
+		<path class="st7" d="M0,28h7.6v-0.6c-0.5,0-0.9,0-1.2-0.1c-0.3,0-0.5-0.1-0.7-0.3c-0.2-0.1-0.3-0.3-0.4-0.6
+			c-0.1-0.2-0.1-0.6-0.1-1v-5.2h1.2c1.1,0,1.9,0.2,2.3,0.5c0.5,0.3,0.8,0.9,1,1.9h0.6V17H9.8c-0.1,0.6-0.3,1-0.5,1.3
+			c-0.2,0.3-0.5,0.5-1,0.6c-0.4,0.1-1,0.2-1.8,0.2H5.3V14c0-0.3,0.1-0.5,0.2-0.7c0.1-0.1,0.3-0.2,0.7-0.2h2.4c0.8,0,1.4,0,1.9,0.1
+			c0.5,0.1,0.9,0.2,1.2,0.4c0.3,0.2,0.6,0.4,0.7,0.7c0.2,0.3,0.3,0.7,0.5,1.1h0.7L13.4,12H0v0.6c0.4,0,0.8,0.1,1,0.1
+			s0.4,0.1,0.6,0.3c0.2,0.1,0.3,0.3,0.4,0.5c0.1,0.2,0.1,0.6,0.1,1v10.9c0,0.4,0,0.8-0.1,1S1.8,26.8,1.6,27
+			c-0.2,0.1-0.4,0.2-0.6,0.3c-0.2,0-0.6,0.1-1,0.1C0,27.4,0,28,0,28z M14.2,15.5H15c0.3-0.9,0.6-1.5,1-1.8c0.4-0.4,1.1-0.5,1.9-0.5
+			h2v12.3c0,0.4,0,0.8-0.1,1s-0.2,0.4-0.4,0.6c-0.2,0.1-0.4,0.2-0.7,0.3c-0.3,0-0.6,0.1-1.1,0.1V28h7.7v-0.6c-0.5,0-0.9,0-1.1-0.1
+			c-0.3,0-0.5-0.1-0.7-0.3c-0.2-0.1-0.3-0.3-0.4-0.6c-0.1-0.2-0.1-0.6-0.1-1V13.2h2c0.8,0,1.5,0.2,1.9,0.5c0.4,0.4,0.8,1,1,1.8h0.8
+			L28.5,12H14.6L14.2,15.5z"/>
+	</g>
+</g>
+<rect id="webChart" x="10" y="69" class="st0" width="555" height="316"/>
+<g transform="translate(0,19.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 51.3317 74.7444)" class="st4 st2 st5">Norway</text>
+</g>
+<g transform="translate(0,43.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 58.0276 74.7444)" class="st4 st2 st5">France</text>
+</g>
+<g transform="translate(0,67.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 50.3418 74.7444)" class="st4 st2 st5">Sweden</text>
+</g>
+<g transform="translate(0,91.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 53.4018 74.7444)" class="st4 st2 st5">Finland</text>
+</g>
+<g transform="translate(0,115.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 41.72 74.7444)" class="st4 st2 st5">Denmark</text>
+</g>
+<g transform="translate(0,139.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 19.994 74.7444)" class="st4 st2 st5">Netherlands</text>
+</g>
+<g transform="translate(0,163.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 41.792 74.7444)" class="st4 st2 st5">Germany</text>
+</g>
+<g transform="translate(0,187.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 83.4796 74.7444)" class="st4 st2 st5">UK</text>
+</g>
+<g transform="translate(0,211.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 23.8098 74.7444)" class="st4 st2 st5">Switzerland</text>
+</g>
+<g transform="translate(0,235.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 66.0377 74.7444)" class="st4 st2 st5">Spain</text>
+</g>
+<g transform="translate(0,259.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<text transform="matrix(1 0 0 1 57.0014 74.7444)" class="st4 st2 st5">Ireland</text>
+</g>
+<g transform="translate(0,283.5)">
+	<line class="st8" x1="107.4" y1="69" x2="107.4" y2="69"/>
+	<rect x="48.8" y="60.2" class="st0" width="55.6" height="18.1"/>
+	<text transform="matrix(1 0 0 1 84.3978 74.7444)" class="st4 st9 st5">US</text>
+</g>
+<path class="st0" d="M107.4,69L107.4,69v304l0,0"/>
+<g transform="translate(10,0)">
+	<g transform="translate(87.359375,0)">
+		<line class="st10" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 5.1581 388.78)" class="st4 st2 st5">0</text>
+	</g>
+	<g transform="translate(132.62343750000002,0)">
+		<line class="st8" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 5.986 388.78)" class="st4 st2 st5">5</text>
+	</g>
+	<g transform="translate(177.8875,0)">
+		<line class="st8" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 2.1971 388.78)" class="st4 st2 st5">10</text>
+	</g>
+	<g transform="translate(223.1515625,0)">
+		<line class="st8" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 3.0251 388.78)" class="st4 st2 st5">15</text>
+	</g>
+	<g transform="translate(268.415625,0)">
+		<line class="st8" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 1.1622 388.78)" class="st4 st2 st5">20</text>
+	</g>
+	<g transform="translate(313.6796875,0)">
+		<line class="st8" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 1.9182 388.78)" class="st4 st2 st5">25</text>
+	</g>
+	<g transform="translate(358.94375,0)">
+		<line class="st8" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 1.2251 388.78)" class="st4 st2 st5">30</text>
+	</g>
+	<g transform="translate(404.2078125,0)">
+		<line class="st8" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 2.0261 388.78)" class="st4 st2 st5">35</text>
+	</g>
+	<g transform="translate(449.471875,0)">
+		<line class="st8" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 0.5861 388.78)" class="st4 st2 st5">40</text>
+	</g>
+	<g transform="translate(494.7359375,0)">
+		<line class="st8" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 1.414 388.78)" class="st4 st2 st5">45</text>
+	</g>
+	<g transform="translate(540,0)">
+		<line class="st8" x1="10" y1="69" x2="10" y2="373"/>
+		<text transform="matrix(1 0 0 1 1.144 388.78)" class="st4 st2 st5">50</text>
+	</g>
+	<path class="st0" d="M97.4,373V69H550v304"/>
+</g>
+<g id="Norway-_42.3_1_" transform="translate(97.359375,0)">
+	<rect id="Norway-_42.3" x="10" y="79" class="st11" width="382.9" height="19"/>
+</g>
+<g id="France-_37.5_1_" transform="translate(97.359375,0)">
+	<rect id="France-_37.5" x="10" y="103" class="st11" width="339.5" height="19"/>
+</g>
+<g id="Sweden-_35.3_1_" transform="translate(97.359375,0)">
+	<rect id="Sweden-_35.3" x="10" y="127" class="st11" width="319.6" height="19"/>
+</g>
+<g id="Finland-_30.8_1_" transform="translate(97.359375,0)">
+	<rect id="Finland-_30.8" x="10" y="151" class="st11" width="278.8" height="19"/>
+</g>
+<g id="Denmark-_26.7_1_" transform="translate(97.359375,0)">
+	<rect id="Denmark-_26.7" x="10" y="175" class="st11" width="241.7" height="19"/>
+</g>
+<g id="Netherlands-_25.1_1_" transform="translate(97.359375,0)">
+	<rect id="Netherlands-_25.1" x="10" y="199" class="st11" width="227.2" height="19"/>
+</g>
+<g id="Germany-_24.4_1_" transform="translate(97.359375,0)">
+	<rect id="Germany-_24.4" x="10" y="223" class="st11" width="220.9" height="19"/>
+</g>
+<g id="UK-_20.0_1_" transform="translate(97.359375,0)">
+	<rect id="UK-_20.0" x="10" y="247" class="st11" width="181.1" height="19"/>
+</g>
+<g id="Switzerland-_18.5_1_" transform="translate(97.359375,0)">
+	<rect id="Switzerland-_18.5" x="10" y="271" class="st11" width="167.5" height="19"/>
+</g>
+<g id="Spain-_18.4_1_" transform="translate(97.359375,0)">
+	<rect id="Spain-_18.4" x="10" y="295" class="st11" width="166.6" height="19"/>
+</g>
+<g id="Ireland-_16.0_1_" transform="translate(97.359375,0)">
+	<rect id="Ireland-_16.0" x="10" y="319" class="st11" width="144.8" height="19"/>
+</g>
+<g id="US-_15.1_1_" transform="translate(97.359375,0)">
+	<rect id="US-_15.1" x="10" y="343" class="st12" width="136.7" height="19"/>
+</g>
+</svg>

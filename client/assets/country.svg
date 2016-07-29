@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="webchart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 505" style="enable-background:new 0 0 600 505;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#3B3D3B;}
+	.st2{font-family:'Metric-Regular';}
+	.st3{font-size:25px;}
+	.st4{fill:#6B6E68;}
+	.st5{font-size:18px;}
+	.st6{font-size:14px;}
+	.st7{fill:#DACFC5;}
+	.st8{fill:none;stroke:#C3BCB0;stroke-dasharray:1,2;}
+	.st9{fill:none;stroke:#C3BCB0;}
+	.st10{font-size:16px;}
+	.st11{fill:#9E2F50;stroke:#000000;}
+	.st12{fill:#A5526A;}
+	.st13{font-family:'Metric-Medium';}
+</style>
+<rect x="-9" y="-8" class="st0" width="600" height="500"/>
+<g id="webheader">
+	<text transform="matrix(1 0 0 1 1 18)" class="st1 st2 st3">US directors: older and staler</text>
+	<text transform="matrix(1 0 0 1 1 43.25)" class="st4 st2 st5">Average director age and tenure length</text>
+</g>
+<text transform="matrix(1 0 0 1 1 497.1812)" class="st4 st2 st6">Source: FT analysis of ISS Analytics data</text>
+<g transform="translate(571,484)">
+	<path class="st7" d="M-2,17h7.6v-0.6c-0.5,0-0.9,0-1.2-0.1c-0.3,0-0.5-0.1-0.7-0.3c-0.2-0.1-0.3-0.3-0.4-0.6
+		c-0.1-0.2-0.1-0.6-0.1-1V9.2h1.2c1.1,0,1.9,0.2,2.3,0.5c0.5,0.3,0.8,0.9,1,1.9h0.6V6H7.8C7.7,6.6,7.5,7,7.3,7.3s-0.5,0.5-1,0.6
+		C5.9,8,5.3,8.1,4.5,8.1H3.3V3c0-0.3,0.1-0.5,0.2-0.7c0.1-0.1,0.3-0.2,0.7-0.2h2.4c0.8,0,1.4,0,1.9,0.1C9,2.3,9.4,2.4,9.7,2.6
+		C10,2.8,10.3,3,10.4,3.3c0.2,0.3,0.3,0.7,0.5,1.1h0.7L11.4,1H-2v0.6c0.4,0,0.8,0.1,1,0.1S-0.6,1.8-0.4,2C-0.2,2.1-0.1,2.3,0,2.5
+		c0.1,0.2,0.1,0.6,0.1,1v10.9c0,0.4,0,0.8-0.1,1s-0.2,0.4-0.4,0.6c-0.2,0.1-0.4,0.2-0.6,0.3c-0.2,0-0.6,0.1-1,0.1C-2,16.4-2,17-2,17
+		z M12.2,4.5H13c0.3-0.9,0.6-1.5,1-1.8c0.4-0.4,1.1-0.5,1.9-0.5h2v12.3c0,0.4,0,0.8-0.1,1s-0.2,0.4-0.4,0.6
+		c-0.2,0.1-0.4,0.2-0.7,0.3c-0.3,0-0.6,0.1-1.1,0.1V17h7.7v-0.6c-0.5,0-0.9,0-1.1-0.1c-0.3,0-0.5-0.1-0.7-0.3
+		c-0.2-0.1-0.3-0.3-0.4-0.6c-0.1-0.2-0.1-0.6-0.1-1V2.2h2c0.8,0,1.5,0.2,1.9,0.5c0.4,0.4,0.8,1,1,1.8h0.8L26.5,1H12.6L12.2,4.5z"/>
+</g>
+<rect id="webChart" x="-3" y="54.2" class="st0" width="550" height="416.8"/>
+<g transform="translate(550,20)">
+	<g transform="translate(0,376.75)">
+		<line class="st8" x1="-3" y1="54.2" x2="-520.6" y2="54.2"/>
+		<text transform="matrix(1 0 0 1 -545.0292 60.01)" class="st4 st2 st5">4.0</text>
+	</g>
+	<g transform="translate(0,332.39917125478706)">
+		<line class="st8" x1="-3" y1="54.2" x2="-520.6" y2="54.2"/>
+		<text transform="matrix(1 0 0 1 -544.0928 60.01)" class="st4 st2 st5">4.5</text>
+	</g>
+	<g transform="translate(0,288.0483425095741)">
+		<line class="st8" x1="-3" y1="54.2" x2="-520.6" y2="54.2"/>
+		<text transform="matrix(1 0 0 1 -543.7874 60.01)" class="st4 st2 st5">5.0</text>
+	</g>
+	<g transform="translate(0,243.6975137643612)">
+		<line class="st8" x1="-3" y1="54.2" x2="-520.6" y2="54.2"/>
+		<text transform="matrix(1 0 0 1 -542.8511 60.01)" class="st4 st2 st5">5.5</text>
+	</g>
+	<g transform="translate(0,199.34668501914825)">
+		<line class="st8" x1="-3" y1="54.2" x2="-520.6" y2="54.2"/>
+		<text transform="matrix(1 0 0 1 -544.4172 60.01)" class="st4 st2 st5">6.0</text>
+	</g>
+	<g transform="translate(0,154.99585627393532)">
+		<line class="st8" x1="-3" y1="54.2" x2="-520.6" y2="54.2"/>
+		<text transform="matrix(1 0 0 1 -543.4809 60.01)" class="st4 st2 st5">6.5</text>
+	</g>
+	<g transform="translate(0,110.64502752872244)">
+		<line class="st8" x1="-3" y1="54.2" x2="-520.6" y2="54.2"/>
+		<text transform="matrix(1 0 0 1 -542.4372 60.01)" class="st4 st2 st5">7.0</text>
+	</g>
+	<g transform="translate(0,66.2941987835095)">
+		<line class="st8" x1="-3" y1="54.2" x2="-520.6" y2="54.2"/>
+		<text transform="matrix(1 0 0 1 -541.5009 60.01)" class="st4 st2 st5">7.5</text>
+	</g>
+	<g transform="translate(0,21.943370038296564)">
+		<line class="st8" x1="-3" y1="54.2" x2="-520.6" y2="54.2"/>
+		<text transform="matrix(1 0 0 1 -544.5974 60.01)" class="st4 st2 st5">8.0</text>
+	</g>
+	<path class="st0" d="M-520.6,54.2H-3V431h-517.6"/>
+</g>
+<g transform="translate(42.390625,396.75)">
+	<g transform="translate(46.14630681818182,0)">
+		<line class="st9" x1="-3" y1="54.2" x2="-3" y2="63.2"/>
+		<text transform="matrix(1 0 0 1 -10.947 79.03)" class="st4 st2 st5">52</text>
+	</g>
+	<g transform="translate(138.43892045454544,0)">
+		<line class="st9" x1="-3" y1="54.2" x2="-3" y2="63.2"/>
+		<text transform="matrix(1 0 0 1 -11.604 79.03)" class="st4 st2 st5">54</text>
+	</g>
+	<g transform="translate(230.7315340909091,0)">
+		<line class="st9" x1="-3" y1="54.2" x2="-3" y2="63.2"/>
+		<text transform="matrix(1 0 0 1 -11.352 79.03)" class="st4 st2 st5">56</text>
+	</g>
+	<g transform="translate(323.02414772727275,0)">
+		<line class="st9" x1="-3" y1="54.2" x2="-3" y2="63.2"/>
+		<text transform="matrix(1 0 0 1 -11.4419 79.03)" class="st4 st2 st5">58</text>
+	</g>
+	<g transform="translate(415.3167613636364,0)">
+		<line class="st9" x1="-3" y1="54.2" x2="-3" y2="63.2"/>
+		<text transform="matrix(1 0 0 1 -12.1799 79.03)" class="st4 st2 st5">60</text>
+	</g>
+	<g transform="translate(507.609375,0)">
+		<line class="st9" x1="-3" y1="54.2" x2="-3" y2="63.2"/>
+		<text transform="matrix(1 0 0 1 -11.217 79.03)" class="st4 st2 st5">62</text>
+	</g>
+	<path class="st0" d="M-3,63.2v-9h507.6v9"/>
+</g>
+<text transform="matrix(1 0 0 1 519.2441 446.5)" class="st4 st2 st10">Age</text>
+<text transform="matrix(1 0 0 1 1 81.25)" class="st4 st2 st10">Tenure length</text>
+<circle id="US" class="st11" cx="525.2" cy="74.2" r="5.6"/>
+<circle id="Canada" class="st12" cx="499.9" cy="126.1" r="5.6"/>
+<circle id="Spain" class="st12" cx="481.5" cy="144.1" r="5.6"/>
+<circle id="Netherlands" class="st12" cx="419.2" cy="398.8" r="5.6"/>
+<circle id="Switzerland" class="st12" cx="403" cy="216.9" r="5.6"/>
+<circle id="Brazil" class="st12" cx="380.9" cy="390.3" r="5.6"/>
+<circle id="Italy" class="st12" cx="362" cy="196.4" r="5.6"/>
+<circle id="Ireland" class="st12" cx="340.7" cy="189.9" r="5.6"/>
+<circle id="Finland" class="st12" cx="338" cy="403.2" r="5.6"/>
+<circle id="Germany" class="st12" cx="334.3" cy="270.7" r="5.6"/>
+<circle id="UK" class="st12" cx="316.7" cy="304.6" r="5.6"/>
+<circle id="France" class="st12" cx="308.4" cy="221.7" r="5.6"/>
+<circle id="South_Africa" class="st12" cx="273.4" cy="143" r="5.6"/>
+<circle id="Sweden" class="st12" cx="263.2" cy="302.6" r="5.6"/>
+<circle id="Denmark" class="st12" cx="222.1" cy="307.4" r="5.6"/>
+<circle id="Norway" class="st12" cx="177.4" cy="397.4" r="5.6"/>
+<circle id="Russia" class="st12" cx="61.1" cy="439.1" r="5.6"/>
+<text id="webUS" transform="matrix(1 0 0 1 525.1581 65.6934)" class="st4 st13 st5">US</text>
+<text id="webCanada" transform="matrix(1 0 0 1 499.9308 117.5349)" class="st4 st2 st5">Canada</text>
+<text id="webSpain" transform="matrix(1 0 0 1 481.4723 163.5835)" class="st4 st2 st5">Spain</text>
+<text id="webNetherlands" transform="matrix(1 0 0 1 422.1747 390.24)" class="st4 st2 st5">Netherlands</text>
+<text id="webSwitzerland" transform="matrix(1 0 0 1 415.0236 225.2985)" class="st4 st2 st5">Switzerland</text>
+<text id="webBrazil" transform="matrix(1 0 0 1 380.8733 381.7314)" class="st4 st2 st5">Brazil</text>
+<text id="webItaly" transform="matrix(1 0 0 1 361.9533 217.8925)" class="st4 st2 st5">Italy</text>
+<text id="webIreland" transform="matrix(1 0 0 1 340.726 181.3477)" class="st4 st2 st5">Ireland</text>
+<text id="webFinland" transform="matrix(1 0 0 1 284.9573 394.6694)" class="st4 st2 st5">Finland</text>
+<text id="webGermany" transform="matrix(1 0 0 1 334.2655 262.1406)" class="st4 st2 st5">Germany</text>
+<text id="webUK" transform="matrix(1 0 0 1 316.7299 296.0488)" class="st4 st2 st5">UK</text>
+<text id="webFrance" transform="matrix(1 0 0 1 254.4236 212.188)" class="st4 st2 st5">France</text>
+<text id="webSouthAfrica" transform="matrix(1 0 0 1 273.3524 134.459)" class="st4 st2 st5">South Africa</text>
+<text id="webSweden" transform="matrix(1 0 0 1 256.2002 291.0312)" class="st4 st2 st5">Sweden</text>
+<text id="webDenmark" transform="matrix(1 0 0 1 153.13 298.8403)" class="st4 st2 st5">Denmark</text>
+<text id="webNorway" transform="matrix(1 0 0 1 177.3681 388.8537)" class="st4 st2 st5">Norway</text>
+<text id="webRussia" transform="matrix(1 0 0 1 61.0794 430.5539)" class="st4 st2 st5">Russia</text>
+</svg>

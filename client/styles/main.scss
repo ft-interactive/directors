@@ -17,9 +17,41 @@ body {
   font-family: $font-sans;
 }
 
-main {
-  margin: 0 10px;
+.half-width {
+  float: right;
+  display: inline;
+  padding: 20px;
+  margin: 0px -40px 0px 10px;
 }
+
+.full-width {
+  display: inline;
+  padding: 20px 0px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.table-heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+
+  &:after {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    border: 1px solid #979797;
+    content: '';
+    margin-top: 0.75em;
+  }
+}
+
+.table-subhead {
+  text-align: center;
+  font-family: MetricWeb, san-serif;
+}
+
 .site-header {
   padding: 18px 0 14px;
   text-align: center;
@@ -274,18 +306,25 @@ max-width: 620px;
     }
     > tbody > tr > td {
       color: oColorsGetPaletteColor('grey-tint4');
-      padding: 8px 9px;
+      padding: 8px 5px;
       border-bottom: 1px solid oColorsGetPaletteColor('pink-tint2');
   
     }
-    > tbody > tr > td:nth-child(2) {
+    > tbody > tr > td:nth-child(4) {
 
        color: oColorsGetPaletteColor('grey-tint5');
-      text-align: right;
-      font-weight: 600;
+        text-align: right;      
         -webkit-font-feature-settings: 'tnum' 1;
     font-feature-settings: 'tnum' 1;
     }
+
+    > tbody > tr > td:nth-child(3) {
+
+      text-align: right;
+      -webkit-font-feature-settings: 'tnum' 1;
+    font-feature-settings: 'tnum' 1;
+    }
+    
   }
 }
 
@@ -349,7 +388,7 @@ img .commercial-plane{
 }
 
 
-.story-card-link {
+.story-card-link1 {
     margin-right: 20px;
     float: right;
     font-family: $font-sans;
@@ -358,8 +397,17 @@ img .commercial-plane{
     border-bottom: 1px dotted #27757b;
     text-decoration: none;
     margin-bottom: 15px;
-
 }
+
+.story-card-link {
+    font-family: $font-sans;
+    font-size: 16px; 
+    color: #27757b;
+    border-bottom: 1px dotted #27757b;
+    text-decoration: none;
+    
+}
+
 
 .story-fact-words {
   font-family: $font-sans;
@@ -867,10 +915,29 @@ article{
   .video-player {
     height: 300px;
   }
+
 }
 
 
 @media (max-width: 600px) {
+
+  .half-width {
+  float: none;
+  display: inline-block;
+  padding: 20px;
+  margin: 0 auto;
+  width: 300px;
+   img {
+    width: 100%;
+  }
+  }
+
+  .full-width {
+  display: inline;
+  padding: 20px 0px;
+  max-width: 600px;
+  width: 100%;
+ }
 
   h1 {
     font-size: 2.1em;
