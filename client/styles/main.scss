@@ -34,8 +34,8 @@ body {
  .button {    
     border: 2px solid #505050;
     color: #505050;
-    padding: 15px 32px;
-    margin: 15px;
+    padding: 10px 32px;
+    margin: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;    
@@ -88,21 +88,23 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.1em;
-  max-width: 400px;
+  color: #505050;
+  padding: 2em 9em 1em 9em;
 
-  &:after {
+  &:before {
     display: block;
     margin: 0 auto;
     width: 60px;
     border: 1px solid #979797;
     content: '';
-    margin-top: 0.75em;
+    margin-bottom: 1.75em;
   }
 }
 
 .table-subhead {
   text-align: center;
   font-family: MetricWeb, san-serif;
+  font-size: 17px;
 }
 
 .site-header {
@@ -1036,6 +1038,10 @@ article{
     line-height: 21px;
   }
 
+  .table-heading {
+    padding: 1.75em 2em .75em 2em;  
+  }
+
 }
 
 @media (min-width: 800px) and (max-width: 900px) {
@@ -1050,6 +1056,8 @@ article{
   .video-player {
     height: 250px;
   }
+
+
 }
 
 @media (max-width: 360px) {
@@ -1059,4 +1067,6 @@ article{
   .video-player {
     height: 210px;
   }
+
+
 }
