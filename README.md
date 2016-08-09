@@ -1,22 +1,4 @@
-# [The corporate jet files](https://ig.ft.com/sites/business-jets/)
-
-An FT investigation into executives’ personal use of company planes at the biggest US companies.
-
-The biggest publicly listed US companies spent $40m last year giving free flights on corporate jets to some of their highest-paid executives.
-
-The Financial Times analysed more than a thousand securities filings to look into this contentious practice and found that a small group of companies, roughly 10 per cent of the S&P 500, accounted for two-thirds of total spending on personal use of corporate aircraft.
-
-This is the repo for this article.
-
-## Methodology and Data
-
-Please see our [methodology page](https://ig.ft.com/sites/business-jets/data.html)
-
-## usage
-
-```
-$ npm start
-```
+# Clone of [The corporate jet files](https://ig.ft.com/sites/business-jets/)
 
 ## Uses Starter Kit
 
