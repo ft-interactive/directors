@@ -677,48 +677,37 @@
         </div> -->
    		<div id="explore-interactive">
    			<h2>Interactive: How does your company rank?</h2>
-   			<p>Search for your company to see how it compares to others in the same sector and country.</p>
-   			<label for="companyname">Search for your company: </label>
-   			<input type="text" name="companyname" placeholder="e.g. Apple" />
+   			<p><label for="companyname">Search for your company to see how it compares to others in the same sector and country.</label></p>
+   			<input type="text" name="companyname" placeholder="e.g. Your company, Apple" />
    			<button id="interactive-search">Search</button>
-   			<div id="result-legend-wrapper">
-   				<div class="result-legend-container" id="legend-company">
-   					<div class="result-legend-box" style="background: #af516c;"></div>
-   					<div class="result-legend-label">Apple</div>
-   				</div>
-   				<div class="result-legend-container" id="legend-industry">
-   					<div class="result-legend-box" style="background: #ecafaf;"></div>
-   					<div class="result-legend-label">Technology</div>
-   				</div>
-   				<div class="result-legend-container" id="legend-country">
-   					<div class="result-legend-box" style="background: #d7706c;"></div>
-   					<div class="result-legend-label">US</div>
-   				</div>
-   			</div>
+        <p id="interactive-search-suggestions">or view <span class="interactive-search-suggestion">Apple</span>, <span class="interactive-search-suggestion">Cheesecake Factory</span> or <span class="interactive-search-suggestion">Danaher</span></p>
    			<div id="result-wrapper">
    				<div class="result-container" id="result-tenure">
    					<div class="result-header">Tenure</div>
+            <!-- <div class="result-unit">years</div> -->
    					<div class="result-chart-container">
-   						<div class="result-chart-rect result-chart-rect--company" style="height: 70px;"><span class="result-chart-val">6</span></div>
-   						<div class="result-chart-rect result-chart-rect--industry" style="height: 30px;"><span class="result-chart-val">3</span></div>
-   						<div class="result-chart-rect result-chart-rect--country" style="height: 50px;"><span class="result-chart-val">5</span></div>
+   						<div class="result-chart-rect result-chart-rect--company" style="width: 70%;"><span class="result-catLabel">Apple</span><span class="result-chart-val">6</span></div>
+   						<div class="result-chart-rect result-chart-rect--industry" style="width: 30%;"><span class="result-catLabel">Consumer Discretionary</span><span class="result-chart-val">3</span></div>
+   						<div class="result-chart-rect result-chart-rect--country" style="width: 50%;"><span class="result-catLabel">US</span><span class="result-chart-val">5</span></div>
    					</div>
    				</div>
    				<div class="result-container" id="result-age">
    					<div class="result-header">Age</div>
+            <!-- <div class="result-unit">years</div> -->
    					<div class="result-chart-container">
-   						<div class="result-chart-rect result-chart-rect--company" style="height: 70px;"><span class="result-chart-val">6</span></div>
-   						<div class="result-chart-rect result-chart-rect--industry" style="height: 30px;"><span class="result-chart-val">3</span></div>
-   						<div class="result-chart-rect result-chart-rect--country" style="height: 50px;"><span class="result-chart-val">5</span></div>
-   					</div>
+              <div class="result-chart-rect result-chart-rect--company" style="width: 70%;"><span class="result-catLabel">Apple</span><span class="result-chart-val">6</span></div>
+              <div class="result-chart-rect result-chart-rect--industry" style="width: 30%;"><span class="result-catLabel">Consumer Discretionary</span><span class="result-chart-val">3</span></div>
+              <div class="result-chart-rect result-chart-rect--country" style="width: 50%;"><span class="result-catLabel">US</span><span class="result-chart-val">5</span></div>
+            </div>
    				</div>
    				<div class="result-container" id="result-gender">
    					<div class="result-header">Gender</div>
+            <!-- <div class="result-unit">per cent</div> -->
    					<div class="result-chart-container">
-   						<div class="result-chart-rect result-chart-rect--company" style="height: 70px;"><span class="result-chart-val">6</span></div>
-   						<div class="result-chart-rect result-chart-rect--industry" style="height: 30px;"><span class="result-chart-val">3</span></div>
-   						<div class="result-chart-rect result-chart-rect--country" style="height: 50px;"><span class="result-chart-val">5</span></div>
-   					</div>
+              <div class="result-chart-rect result-chart-rect--company" style="width: 70%;"><span class="result-catLabel">Apple</span><span class="result-chart-val">6</span></div>
+              <div class="result-chart-rect result-chart-rect--industry" style="width: 30%;"><span class="result-catLabel">Consumer Discretionary</span><span class="result-chart-val">3</span></div>
+              <div class="result-chart-rect result-chart-rect--country" style="width: 50%;"><span class="result-catLabel">US</span><span class="result-chart-val">5</span></div>
+            </div>
    				</div>
    			</div>
    		</div>
