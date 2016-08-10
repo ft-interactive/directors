@@ -2,6 +2,26 @@
 	margin: 2.0rem auto 10px;
     max-width: 620px;
 
+    #result-legend-wrapper {
+    	margin: 2em 0 1em 0;
+
+    	.result-legend-container {
+    		display: inline-block;
+    		margin-right: 20px;
+    	
+	    	.result-legend-box {
+	    		width: 30px;
+	    		height: 12px;
+	    		display: inline-block;
+	    	}
+
+	    	.result-legend-label {
+	    		display: inline-block;
+	    		margin-left: 5px;
+	    	}
+	    }
+    }
+
     #result-wrapper {
     	margin: 1em 0;
     }
@@ -60,6 +80,7 @@
 
 			.result-chart-rect--country {
 				left: 70%;
+				background: #d7706c;
 			}
 		}
 	}
