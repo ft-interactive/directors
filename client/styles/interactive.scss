@@ -31,8 +31,8 @@
     }
 
 	.result-container {
-		width: 100%;
-		display: block;
+		width: 32.6%;
+		display: inline-block;
 		margin-bottom: 1em;
 
 		.result-header {
@@ -42,77 +42,32 @@
 			text-transform: uppercase;
 		}
 
-		.result-unit {
-			color: #333;
-			font-size: 0.9em;
-			margin-bottom: 0.5em;
-		}
-
 		.result-chart-container {
-			border-left: 1px solid #333;
-			height: 85px;
 			position: relative;
-			margin-left: 155px;
 			margin-right: 20px;
+			overflow: visible;
 
-			.result-chart-rect {
-				position: absolute;
-				bottom: 0;
-				width: 100%;
-				height: 15px;
-				background: #cec6b9;
-
-				span.result-catLabel {
-					position: absolute;
-					left: -155px;
-					color: #777;
-				}
-
-				span.result-chart-val {
-					position: absolute;
-					right: -13px;
-					width: 100%;
-					text-align: right;
-					font-weight: 500;
-					line-height: 15px;
-					color: #333;
-				}
+			.bar rect{
+				stroke-width: 0;
 			}
 
-			.result-chart-rect--company {
-				top: 10px;
-				background: #af516c;
-
-				span.result-catLabel {
-					font-weight: 600;
-					color: #af516c;
-				}
-
-				span.result-chart-val {
-					right: -50px;
-				}
-
-				span.result-chart-val:after {
-					content: " years";
-				}
+			.bar-labels {
+				stroke: #333;
+				font-size: 14px;
+				font-weight: 100;
 			}
 
-			.result-chart-rect--industry {
-				top: 35px;
+			.tick {
+				font-family: MetricWeb, sans-serif;
+				font-size: 14px;
+				stroke: #333;
+				font-weight: 100;
 			}
-
-			.result-chart-rect--country {
-				top: 60px;
-			}
-
 		}
 
-		&#result-gender .result-chart-rect--company span.result-chart-val {
-			right: -68px;
-		}
-
-		&#result-gender .result-chart-rect--company span.result-chart-val:after {
-			content: " per cent";
+		.xAxisLabel {
+			text-align: center;
+			color: #777;
 		}
 	}
 }
