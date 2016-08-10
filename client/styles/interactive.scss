@@ -1,0 +1,66 @@
+#explore-interactive {
+	margin: 2.0rem auto 10px;
+    max-width: 620px;
+
+    #result-wrapper {
+    	margin: 1em 0;
+    }
+
+	.result-container {
+		width: 32.6%;
+		display: inline-block;
+		
+		&:after {
+			content: "years";
+			width: 100%;
+			text-align: center;
+			position: relative;
+			display: block;
+			color: #777;
+		}
+
+		&#result-gender:after {
+			content: "per cent";
+		}
+
+		.result-header {
+			font-weight: 400;
+			font-size: 1.3em;
+			color: #777777;
+		}
+
+		.result-chart-container {
+			border-bottom: 1px solid black;
+			height: 120px;
+			position: relative;
+			margin-right: 20px;
+
+			.result-chart-rect {
+				position: absolute;
+				bottom: 0;
+				width: 20%;
+				background: #ecafaf;
+
+				span.result-chart-val {
+					position: absolute;
+					top: -20px;
+					width: 100%;
+					text-align: center;
+				}
+			}
+
+			.result-chart-rect--company {
+				left: 10%;
+				background: #af516c;
+			}
+
+			.result-chart-rect--industry {
+				left: 40%;
+			}
+
+			.result-chart-rect--country {
+				left: 70%;
+			}
+		}
+	}
+}
