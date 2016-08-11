@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="webchart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 380" style="enable-background:new 0 0 600 380;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#3B3D3B;}
+	.st1{font-family:'Metric-Regular';}
+	.st2{font-size:25px;}
+	.st3{fill:#6B6E68;}
+	.st4{font-size:18px;}
+	.st5{font-size:14px;}
+	.st6{fill:#DACFC5;}
+	.st7{fill:none;stroke:#C3BCB0;}
+	.st8{enable-background:new    ;}
+	.st9{fill:none;}
+	.st10{font-family:'Metric-Medium';}
+	.st11{font-size:16px;}
+	.st12{fill:none;stroke:#9BA497;stroke-dasharray:1,0;}
+	.st13{fill:none;stroke:#C3BCB0;stroke-dasharray:1,2;}
+	.st14{fill:#A5526A;}
+	.st15{fill:#ECAFAF;}
+	.st16{fill:#D7706C;}
+	.st17{fill:#DF8F87;}
+	.st18{clip-path:url(#SVGID_2_);}
+	.st19{clip-path:url(#SVGID_4_);}
+	.st20{clip-path:url(#SVGID_6_);}
+	.st21{clip-path:url(#SVGID_8_);}
+	.st22{clip-path:url(#SVGID_10_);}
+	.st23{clip-path:url(#SVGID_12_);}
+	.st24{clip-path:url(#SVGID_14_);}
+	.st25{clip-path:url(#SVGID_16_);}
+	.st26{clip-path:url(#SVGID_18_);}
+	.st27{clip-path:url(#SVGID_20_);}
+</style>
+<text transform="matrix(1 0 0 1 0 21)" class="st0 st1 st2">Board diversity by market cap</text>
+<text transform="matrix(1 0 0 1 0 78.5)" class="st3 st1 st4">Market cap ($)</text>
+<text transform="matrix(1 0 0 1 3 372.1812)" class="st3 st1 st5">Source: FT analysis of ISS Analytics data</text>
+<g transform="translate(571,384)">
+	<path class="st6" d="M0-8h7.6v-0.6c-0.5,0-0.9,0-1.2-0.1C6.1-8.7,5.9-8.8,5.7-9C5.5-9.1,5.4-9.3,5.3-9.6c-0.1-0.2-0.1-0.6-0.1-1
+		v-5.2h1.2c1.1,0,1.9,0.2,2.3,0.5c0.5,0.3,0.8,0.9,1,1.9h0.6V-19H9.8c-0.1,0.6-0.3,1-0.5,1.3s-0.5,0.5-1,0.6c-0.4,0.1-1,0.2-1.8,0.2
+		H5.3V-22c0-0.3,0.1-0.5,0.2-0.7c0.1-0.1,0.3-0.2,0.7-0.2h2.4c0.8,0,1.4,0,1.9,0.1s0.9,0.2,1.2,0.4s0.6,0.4,0.7,0.7
+		c0.2,0.3,0.3,0.7,0.5,1.1h0.7L13.4-24H0v0.6c0.4,0,0.8,0.1,1,0.1s0.4,0.1,0.6,0.3c0.2,0.1,0.3,0.3,0.4,0.5s0.1,0.6,0.1,1v10.9
+		c0,0.4,0,0.8-0.1,1S1.8-9.2,1.6-9C1.4-8.9,1.2-8.8,1-8.7c-0.2,0-0.6,0.1-1,0.1V-8z M14.2-20.5H15c0.3-0.9,0.6-1.5,1-1.8
+		c0.4-0.4,1.1-0.5,1.9-0.5h2v12.3c0,0.4,0,0.8-0.1,1s-0.2,0.4-0.4,0.6c-0.2,0.1-0.4,0.2-0.7,0.3c-0.3,0-0.6,0.1-1.1,0.1V-8h7.7v-0.6
+		c-0.5,0-0.9,0-1.1-0.1c-0.3,0-0.5-0.1-0.7-0.3c-0.2-0.1-0.3-0.3-0.4-0.6c-0.1-0.2-0.1-0.6-0.1-1v-12.2h2c0.8,0,1.5,0.2,1.9,0.5
+		c0.4,0.4,0.8,1,1,1.8h0.8L28.5-24H14.6L14.2-20.5z"/>
+</g>
+<g transform="translate(0,196.75)">
+	<g transform="translate(27,0)">
+		<line class="st7" x1="103" y1="341.2" x2="103" y2="347.2"/>
+		<text transform="matrix(1 0 0 1 79.8433 363.03)" class="st3 st1 st4">0-50m</text>
+	</g>
+	<g transform="translate(67,0)">
+		<line class="st7" x1="103" y1="341.2" x2="103" y2="347.2"/>
+		<text transform="matrix(1 0 0 1 71.8691 363.03)" class="st3 st1 st4">50m-5bn</text>
+	</g>
+	<g transform="translate(107,0)">
+		<line class="st7" x1="103" y1="341.2" x2="103" y2="347.2"/>
+		<text transform="matrix(1 0 0 1 69.4031 363.03)" class="st3 st1 st4">5bn-50bn</text>
+	</g>
+	<g transform="translate(147,0)">
+		<line class="st7" x1="103" y1="341.2" x2="103" y2="347.2"/>
+		<text transform="matrix(1 0 0 1 80.3651 363.03)" class="st3 st1 st4">50bn+</text>
+	</g>
+	<path class="st9" d="M103,347.2v-6h174.3v6"/>
+</g>
+<text transform="matrix(1 0 0 1 428 134.25)" class="st3 st10 st11">Per cent women</text>
+<rect id="webChart_1_" x="402" y="141.2" class="st9" width="202" height="216.8"/>
+<line class="st12" x1="402" y1="338" x2="576.3" y2="338"/>
+<text transform="matrix(1 0 0 1 579.2812 342.76)" class="st3 st1 st4">0</text>
+<g transform="translate(0,141.4)">
+	<line class="st13" x1="402" y1="161.2" x2="576.3" y2="161.2"/>
+	<text transform="matrix(1 0 0 1 579.2812 167.01)" class="st3 st1 st4">5</text>
+</g>
+<g transform="translate(0,106.05)">
+	<line class="st13" x1="402" y1="160.2" x2="576.3" y2="160.2"/>
+	<text transform="matrix(1 0 0 1 579.2812 166.01)" class="st3 st1 st4">10</text>
+</g>
+<g transform="translate(0,70.7)">
+	<line class="st13" x1="402" y1="158.2" x2="576.3" y2="158.2"/>
+	<text transform="matrix(1 0 0 1 579.2812 164.01)" class="st3 st1 st4">15</text>
+</g>
+<g transform="translate(0,35.349999999999994)">
+	<line class="st13" x1="402" y1="160.2" x2="576.3" y2="160.2"/>
+	<text transform="matrix(1 0 0 1 579.2812 166.01)" class="st3 st1 st4">20</text>
+</g>
+<g transform="translate(0,0)">
+	<line class="st13" x1="402" y1="160.2" x2="576.3" y2="160.2"/>
+	<text transform="matrix(1 0 0 1 579.2812 166.01)" class="st3 st1 st4">25</text>
+</g>
+<g id="_x30_-50m-12_1_" transform="translate(0,20)">
+	<rect id="_x30_-50m-12" x="415" y="233.2" class="st14" width="28" height="84.8"/>
+</g>
+<g id="_x35_0m-5bn-16_1_" transform="translate(0,20)">
+	<rect id="_x35_0m-5bn-16" x="455" y="203.9" class="st15" width="28" height="113.1"/>
+</g>
+<g id="_x35_bn-50bn-21_1_" transform="translate(0,20)">
+	<rect id="_x35_bn-50bn-21" x="495" y="168.5" class="st16" width="28" height="148.5"/>
+</g>
+<g id="_x35_0bn_x2B_-25_1_" transform="translate(0,20)">
+	<rect id="_x35_0bn_x2B_-25" x="535" y="140.2" class="st17" width="28" height="176.8"/>
+</g>
+<line class="st7" x1="-4" y1="727" x2="-4" y2="733"/>
+<line class="st7" x1="62" y1="725" x2="62" y2="731"/>
+<line class="st7" x1="129" y1="722" x2="129" y2="728"/>
+<line class="st7" x1="192" y1="723" x2="192" y2="729"/>
+<path class="st9" d="M11,728v-6h174.3v6"/>
+<text transform="matrix(1 0 0 1 225 134.25)" class="st3 st10 st11">Average age</text>
+<rect id="webChart_3_" x="197" y="141.2" class="st9" width="202" height="216.8"/>
+<line class="st12" x1="197" y1="338" x2="371.3" y2="338"/>
+<text transform="matrix(1 0 0 1 374.2812 343.76)" class="st3 st1 st4">58</text>
+<g transform="translate(0,117.83333333333334)">
+	<line class="st13" x1="197" y1="161.2" x2="371.3" y2="161.2"/>
+	<text transform="matrix(1 0 0 1 374.2812 167.0099)" class="st3 st1 st4">59</text>
+</g>
+<line class="st13" x1="197" y1="219.2" x2="371.3" y2="219.2"/>
+<text transform="matrix(1 0 0 1 374.2812 224.9268)" class="st3 st1 st4">60</text>
+<g transform="translate(0,0)">
+	<line class="st13" x1="197" y1="160.2" x2="371.3" y2="160.2"/>
+	<text transform="matrix(1 0 0 1 374.2812 166.01)" class="st3 st1 st4">61</text>
+</g>
+<rect x="200" y="161" class="st9" width="166" height="177"/>
+<text transform="matrix(1 0 0 1 33 135.8721)" class="st3 st10 st11">Average tenure</text>
+<line class="st12" x1="-11" y1="338.6" x2="172.6" y2="338.6"/>
+<text transform="matrix(1 0 0 1 175.6406 344.3821)" class="st3 st1 st4">5</text>
+<g transform="translate(0,117.83333333333334)">
+	<line class="st13" x1="0" y1="161.9" x2="173.3" y2="161.9"/>
+	<text transform="matrix(0.9437 0 0 1 176.1294 167.6325)" class="st3 st1 st4">6</text>
+</g>
+<line class="st13" x1="0" y1="220.9" x2="172.6" y2="220.9"/>
+<text transform="matrix(1 0 0 1 175.6406 226.5488)" class="st3 st1 st4">7</text>
+<g transform="translate(0,0)">
+	<line class="st13" x1="-11" y1="161.9" x2="172.6" y2="161.9"/>
+	<text transform="matrix(1 0 0 1 175.6406 167.6321)" class="st3 st1 st4">8</text>
+</g>
+<rect x="-11" y="161.9" class="st9" width="181" height="175.8"/>
+<g>
+	<text transform="matrix(1 0 0 1 39.15 97.9261)" class="st3 st1 st4">0-500m</text>
+	<g id="_x30_-50m-12_2_" transform="translate(0,20)">
+		<rect id="_x30_-50m-12_3_" x="3" y="64.7" class="st14" width="28" height="16.8"/>
+	</g>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 141.15 98.0314)" class="st3 st1 st4">500m-5bn</text>
+	<g id="_x30_-50m-12_4_" transform="translate(0,20)">
+		<rect id="_x30_-50m-12_5_" x="105" y="64.8" class="st15" width="28" height="16.8"/>
+	</g>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 260.15 97.8201)" class="st3 st1 st4">5bn-50bn</text>
+	<g id="_x30_-50m-12_8_" transform="translate(0,20)">
+		<rect id="_x30_-50m-12_9_" x="224" y="64.6" class="st16" width="28" height="16.8"/>
+	</g>
+</g>
+<g>
+	<text transform="matrix(0.9999 -1.384036e-02 1.384036e-02 0.9999 371.3514 98.4549)" class="st3 st1 st4">50bn+</text>
+	<g id="_x30_-50m-12_10_" transform="translate(0,20)">
+		<rect id="_x30_-50m-12_11_" x="335" y="65.2" class="st17" width="28" height="16.8"/>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 0 45.5)" class="st3 st1 st4">Directors of larger companies are older, but serve shorter tenures with more women</text>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="-28" y="167" width="199" height="171"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st18">
+		<g>
+			<defs>
+				<rect id="SVGID_3_" y="180" width="168" height="178.4"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="_x30_-50m-7.5_1_" transform="translate(0,20)" class="st19">
+				<rect id="_x30_-50m-7.5" x="3" y="171.3" class="st14" width="29" height="441.9"/>
+			</g>
+		</g>
+		<g>
+			<defs>
+				<rect id="SVGID_5_" y="180" width="168" height="178.4"/>
+			</defs>
+			<clipPath id="SVGID_6_">
+				<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="_x35_0m-5bn-7.3_1_" transform="translate(0,20)" class="st20">
+				<rect id="_x35_0m-5bn-7.3" x="45" y="183.1" class="st15" width="29" height="430.1"/>
+			</g>
+		</g>
+		<g>
+			<defs>
+				<rect id="SVGID_7_" y="180" width="168" height="178.4"/>
+			</defs>
+			<clipPath id="SVGID_8_">
+				<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="_x35_bn-50bn-7.2_1_" transform="translate(0,20)" class="st21">
+				<rect id="_x35_bn-50bn-7.2" x="87" y="189" class="st16" width="29" height="424.2"/>
+			</g>
+		</g>
+		<g>
+			<defs>
+				<rect id="SVGID_9_" y="180" width="168" height="178.4"/>
+			</defs>
+			<clipPath id="SVGID_10_">
+				<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="_x35_0bn_x2B_-6.9_1_" transform="translate(0,20)" class="st22">
+				<rect id="_x35_0bn_x2B_-6.9" x="129" y="206.7" class="st17" width="29" height="406.5"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_11_" x="197" y="174" width="169" height="164"/>
+	</defs>
+	<clipPath id="SVGID_12_">
+		<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st23">
+		<g>
+			<defs>
+				<rect id="SVGID_13_" x="200" y="181" width="166" height="177"/>
+			</defs>
+			<clipPath id="SVGID_14_">
+				<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="_x30_-50m-59.8_1_" transform="translate(0,20)" class="st24">
+				<rect id="_x30_-50m-59.8" x="210" y="212" class="st14" width="28" height="3523.2"/>
+			</g>
+		</g>
+		<g>
+			<defs>
+				<rect id="SVGID_15_" x="200" y="181" width="166" height="177"/>
+			</defs>
+			<clipPath id="SVGID_16_">
+				<use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="_x35_0m-5bn-59.8_1_" transform="translate(0,20)" class="st25">
+				<rect id="_x35_0m-5bn-59.8" x="250" y="212" class="st15" width="28" height="3523.2"/>
+			</g>
+		</g>
+		<g>
+			<defs>
+				<rect id="SVGID_17_" x="200" y="181" width="166" height="177"/>
+			</defs>
+			<clipPath id="SVGID_18_">
+				<use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="_x35_bn-50bn-60_1_" transform="translate(0,20)" class="st26">
+				<rect id="_x35_bn-50bn-60" x="290" y="200.2" class="st16" width="28" height="3535"/>
+			</g>
+		</g>
+		<g>
+			<defs>
+				<rect id="SVGID_19_" x="200" y="181" width="166" height="177"/>
+			</defs>
+			<clipPath id="SVGID_20_">
+				<use xlink:href="#SVGID_19_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="_x35_0bn_x2B_-60.9_1_" transform="translate(0,20)" class="st27">
+				<rect id="_x35_0bn_x2B_-60.9" x="330" y="147.1" class="st17" width="28" height="3588"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
