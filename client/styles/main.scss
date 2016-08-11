@@ -206,19 +206,19 @@ hr {
     font-weight: 600;
   }
 
-  h6 {
-  max-width: 600px;
-  margin: 0 auto 10px;
-  color: oColorsGetPaletteColor('claret');
-  font-family: $font-display;
-  font-weight: 200;
-  font-style: italic;
-  text-align: center;
-  font-size: 0.95em;
-  > .bullet {
-    margin: 0 10px;
-    }
-  }
+  // h6 {
+  // max-width: 600px;
+  // margin: 0 auto 10px;
+  // color: oColorsGetPaletteColor('claret');
+  // font-family: $font-display;
+  // font-weight: 200;
+  // font-style: italic;
+  // text-align: center;
+  // font-size: 0.95em;
+  // > .bullet {
+  //   margin: 0 10px;
+  //   }
+  // }
 
   .timestamp {
   color: oColorsGetPaletteColor('warm-6');
