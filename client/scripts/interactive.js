@@ -252,15 +252,15 @@ function displayCharts(error, data, companyName) {
 					.text(`Country: ${companyData.country}`);
 			} else {
 				resultWrapper.append('div')
-					.attr('class', 'result-sectorName')
+					.attr('class', 'result-sectorName-global')
 					.text(`Includes companies with a market cap of at least $2m in 10 sectors and 29 countries`);
 
 				resultWrapper.append('div')
-					.attr('class', 'result-sectorName')
+					.attr('class', 'result-sectorName-global-hide')
 					.text(`.`);
 
 				resultWrapper.append('div')
-					.attr('class', 'result-sectorName')
+					.attr('class', 'result-sectorName-global-hide')
 					.attr('id', 'country')
 					.text(`.`);
 			}
