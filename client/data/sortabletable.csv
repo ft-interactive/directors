@@ -1,4 +1,5 @@
 name,country,avgTenure,avgAge,percentWomen,cap,industry,industryTenure,industryAge,industryWomen,globalTenure,globalAge,globalWomen,countryTenure,countryAge,countryWomen
+Global average,29 countries,7.4,60,17,,0.1338,Financials,7.92,60.71,18,7.4,60,17,7.662806089,60.97683653,17
 Chesswood Group Limited,Canada,6.4,80,0,0.1338,Financials,7.92,60.71,18,7.4,60,17,7.662806089,60.97683653,17
 "RPC, Inc.",US,23.8,79,12.5,3.2859,Energy,7,60.92,12,7.4,60,17,8.247254471,61.43591152,15
 Marine Products Corporation,US,13.5,79,12.5,0.3488,Consumer Discretionary,7.57,59.12,20,7.4,60,17,8.247254471,61.43591152,15

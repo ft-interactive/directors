@@ -11,6 +11,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const chartTitle = categoryData.chartTitle;
 	const categoryColumn = categoryData.column;
 	const xAxisLabel = categoryData.xAxisLabel;
+	const annotation = categoryData.annotation;
 
 	// console.log(companyData)
 
@@ -28,10 +29,14 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('class', 'xAxisLabel')
 		.text(xAxisLabel);
 
+	resultContainer.append('div')
+		.attr('class', 'annotation')
+		.text(annotation);
+
 	const margins = {
 		left: 20,
 		right: 20,
-		top: 40,
+		top: 10,
 		bottom: 20,
 	};
 
@@ -53,7 +58,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('width', graphWidth)
 		.attr('height', graphHeight)
 		.attr('transform', `translate(${margins.left},${margins.top})`)
-		.attr('id', 'annotationLayer');		
+		.attr('id', 'annotationLayer');
 
 	let data = _.pluck(spreadsheetData, categoryColumn);
 	data = _.map(data, num => Number(num));
@@ -65,7 +70,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 
 	const bins = d3.histogram()
 		.domain(x.domain())
-		.thresholds(9)(data);
+		.thresholds(40)(data);
 
 	const xAxis = d3.axisBottom(x)
 		.tickFormat((d, i) => {
@@ -117,66 +122,68 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		})
 		.attr('transform', d => `translate(${x(d.x0)},${y(d.length)})`);
 
-	// lines to label sector and country
-	annotationGroup.selectAll('line.bar-lines-vertical')
-		.data([companyData[`industry${categoryName}`], companyData[`country${categoryName}`]])
-		.enter().append('line')
-		.attr('class', 'bar-lines bar-lines-vertical')
-		.attr('x1', d => `${x(d)}`)
-		.attr('x2', d => `${x(d)}`)
-		.attr('y1', graphHeight)
-		.attr('y2', graphHeight + 35);
+	if (companyData.name !== 'Global average') {
+		// lines to label sector and country
+		annotationGroup.selectAll('line.bar-lines-vertical')
+			.data([companyData[`industry${categoryName}`], companyData[`country${categoryName}`]])
+			.enter().append('line')
+			.attr('class', 'bar-lines bar-lines-vertical')
+			.attr('x1', d => `${x(d)}`)
+			.attr('x2', d => `${x(d)}`)
+			.attr('y1', graphHeight)
+			.attr('y2', graphHeight + 35);
 
-	annotationGroup.selectAll('line.bar-lines-horizontal')
-		.data([Number(companyData[`industry${categoryName}`]), Number(companyData[`country${categoryName}`])].sort((a, b) => +a - +b))
-		.enter().append('line')
-		.attr('class', 'bar-lines bar-lines-horizontal')
-		.attr('x1', d => `${x(d)}`)
-		.attr('x2', (d, i) => {
-			if (i === 0) {
-				return `${x(d) - 10}`;
-			}
-			return `${x(d) + 10}`;
-		})
-		.attr('y1', graphHeight + 35)
-		.attr('y2', graphHeight + 35);
+		annotationGroup.selectAll('line.bar-lines-horizontal')
+			.data([Number(companyData[`industry${categoryName}`]), Number(companyData[`country${categoryName}`])].sort((a, b) => +a - +b))
+			.enter().append('line')
+			.attr('class', 'bar-lines bar-lines-horizontal')
+			.attr('x1', d => `${x(d)}`)
+			.attr('x2', (d, i) => {
+				if (i === 0) {
+					return `${x(d) - 10}`;
+				}
+				return `${x(d) + 10}`;
+			})
+			.attr('y1', graphHeight + 35)
+			.attr('y2', graphHeight + 35);
 
-	const sectorCountryLabel = annotationGroup.selectAll('text.bar-labels.sectorCountry')
-		.data(_.sortBy([{
-			name: 'Sector',
-			value: Number(companyData[`industry${categoryName}`]),
-		}, {
-			name: companyData.country,
-			value: Number(companyData[`country${categoryName}`]),
-		}], 'value'))
-		.enter().append('text')
-		.attr('class', 'bar-labels bar-labels-sectorCountry')
-		.attr('y', -8)
-		.attr('transform', (d, i) => {
-			if (i === 0) {
-				return `translate(${x(d.value) - 12},${graphHeight + 46})`;
-			}
-			return `translate(${x(d.value) + 12},${graphHeight + 46})`;
-		})
-		.attr('text-anchor', (d, i) => {
-			if (i === 0) {
-				return 'end';
-			}
-		});
+		const sectorCountryLabel = annotationGroup.selectAll('text.bar-labels.sectorCountry')
+			.data(_.sortBy([{
+				name: 'Sector',
+				value: Number(companyData[`industry${categoryName}`]),
+			}, {
+				name: companyData.country,
+				value: Number(companyData[`country${categoryName}`]),
+			}], 'value'))
+			.enter().append('text')
+			.attr('class', 'bar-labels bar-labels-sectorCountry')
+			.attr('y', -8)
+			.attr('transform', (d, i) => {
+				if (i === 0) {
+					return `translate(${x(d.value) - 12},${graphHeight + 46})`;
+				}
+				return `translate(${x(d.value) + 12},${graphHeight + 46})`;
+			})
+			.attr('text-anchor', (d, i) => {
+				if (i === 0) {
+					return 'end';
+				}
+			});
 
-	sectorCountryLabel.append('tspan')
-		.text(d => d.name)
-		.attr('x', 0);
+		sectorCountryLabel.append('tspan')
+			.text(d => d.name)
+			.attr('x', 0);
 
-	sectorCountryLabel.append('tspan')
-		.text(d => d3.format('.1f')(d.value))
-		.attr('dy', '1em')
-		.attr('x', 0);
+		sectorCountryLabel.append('tspan')
+			.text(d => d3.format('.1f')(d.value))
+			.attr('dy', '1em')
+			.attr('x', 0);
+	}
 }
 
 function displayCharts(error, data, companyName) {
 	dataset = data;
-	companyName = companyName || 'Apple Inc.';
+	companyName = companyName || 'Global average';
 
 	const categories = {
 		tenure: {
@@ -185,6 +192,7 @@ function displayCharts(error, data, companyName) {
 			column: 'avgTenure',
 			xAxisLabel: 'years',
 			threshold: 9,
+			annotation: '',
 		},
 		age: {
 			chartTitle: 'Age',
@@ -192,13 +200,15 @@ function displayCharts(error, data, companyName) {
 			column: 'avgAge',
 			xAxisLabel: 'years',
 			threshold: 10,
+			annotation: '',
 		},
 		gender: {
-			chartTitle: 'Gender',
+			chartTitle: 'Gender composition',
 			header: 'Women',
 			column: 'percentWomen',
 			xAxisLabel: 'per cent female',
 			threshold: 9,
+			annotation: '',
 		},
 	};
 
@@ -227,18 +237,33 @@ function displayCharts(error, data, companyName) {
 				.attr('class', 'result-companyName')
 				.text(companyName);
 
-			resultWrapper.append('div')
-				.attr('class', 'result-sectorName')
-				.text(`Sector: ${companyData.industry}`);
+			if (companyName !== 'Global average') {
+				resultWrapper.append('div')
+					.attr('class', 'result-sectorName')
+					.text(`Sector: ${companyData.industry}`);
 
-			resultWrapper.append('div')
-				.attr('class', 'result-sectorName')
-				.text(`Market cap: $${d3.format('.1f')(companyData.cap)}bn`);
+				resultWrapper.append('div')
+					.attr('class', 'result-sectorName')
+					.text(`Market cap: $${d3.format('.1f')(companyData.cap)}bn`);
 
-			resultWrapper.append('div')
-				.attr('class', 'result-sectorName')
-				.attr('id', 'country')
-				.text(`Country: ${companyData.country}`);
+				resultWrapper.append('div')
+					.attr('class', 'result-sectorName')
+					.attr('id', 'country')
+					.text(`Country: ${companyData.country}`);
+			} else {
+				resultWrapper.append('div')
+					.attr('class', 'result-sectorName')
+					.text(`Includes companies with a market cap of at least $2m in 10 sectors and 29 countries`);
+
+				resultWrapper.append('div')
+					.attr('class', 'result-sectorName')
+					.text(`.`);
+
+				resultWrapper.append('div')
+					.attr('class', 'result-sectorName')
+					.attr('id', 'country')
+					.text(`.`);
+			}
 
 			for (const category in categories) {
 				if (categories.hasOwnProperty(category)) {
