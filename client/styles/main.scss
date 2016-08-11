@@ -1067,7 +1067,7 @@ article{
     // width:55%;
     float: none;
     margin-top: 16px;
-    p.byline {
+    .byline {
       font-family: $font-sans;
       text-align: center;
       width: 100%;
@@ -1114,14 +1114,12 @@ article{
       border-top: 1px solid #e9decf;
       margin-top: 8px;
     }
-    p.introtext {
-      text-align: left;
-    }
     .introtext {
+      text-align: left;
       font-family: $font-display, Georgia, serif;
       font-size: 18px;
       color: oColorsGetPaletteColor('grey-tint4');
-      max-width: 600px;
+      max-width: 620px;
       line-height: 22px;
       margin: 0 auto 0.8em;
       a {
@@ -1154,29 +1152,38 @@ a:hover {
   color: #333;
 }
 
-@include oGridRespondTo(L) {
+@include oGridRespondTo(S) {
   .main-panel {
-    h1 {
-      font-size: 56px;
-      padding-top: 30px;
-    }
     .introtext {
-      font-size: 24px;
-      line-height: 28px;
+      max-width: 720px;
+      text-align: left;
+      font-size: 20px;
+    }
+    .byline {
+      max-width: 720px;
+      text-align: left;
     }
   }
 }
 
 
+
 @include oGridRespondTo(M) {
   .main-panel {
     margin-top: 16px;
+    // .introtext {
+    //   max-width: 620px;
+    // }
+    .byline {
+      text-align: center;
+    }
     .o-typography-flyline__link {
       font-size: 20px;
     }
     h1 {
       font-size: 50px;
       margin-top: 10px;
+      line-height: 1.1em;
       text-align: center;
     }
     .introtext {
@@ -1186,7 +1193,7 @@ a:hover {
   }
   p {
     font-size: 18px;
-    line-height: 1.3em;
+    line-height: 1.4em;
     margin: 10px 0 0 0;
   }
 
@@ -1205,6 +1212,20 @@ a:hover {
 
   .byline {
     font: 16px/1.20 FinancierText;
+  }
+}
+
+@include oGridRespondTo(L) {
+  .main-panel {
+    h1 {
+      font-size: 56px;
+      padding-top: 20px;
+      line-height: 1.1em;
+    }
+    .introtext {
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 }
 
