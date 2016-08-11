@@ -59,7 +59,13 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const resultChart = resultContainer.append('svg')
 		.attr('class', 'result-chart-container')
 		.attr('width', graphWidth + margins.left + margins.right)
-		.attr('height', graphHeight + margins.top + margins.right);
+		.attr('height', graphHeight + margins.top + margins.right)
+		.attr('aria-labelledby', 'title');
+
+	resultChart.append('title') // add title for accessibility
+		.text(`Distribution of ${chartTitle}`);
+
+	const chartDescription = resultChart.append('desc'); // add description for accessibility
 
 	const resultChartGroup = resultChart.append('g')
 		.attr('width', graphWidth)
@@ -132,9 +138,11 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('y', -8)
 		.text(d => {
 			if (companyData && Number(companyData[categoryColumn]) > d.x0 && Number(companyData[categoryColumn]) <= d.x1) {
+				chartDescription.text(`The average for ${companyData.name} is ${d3.format('.1f')(companyData[categoryColumn])} ${xAxisLabel}.`);
 				return `${d3.format('.1f')(companyData[categoryColumn])}`;
 			}
 			if (companyData && Number(companyData[categoryColumn]) === 0 && d.x0 === 0) {
+				chartDescription.text(`The average for ${companyData.name} is ${d3.format('.1f')(companyData[categoryColumn])} ${xAxisLabel}.`);
 				return `${d3.format('.1f')(companyData[categoryColumn])}`;
 			}
 		})
