@@ -13,8 +13,6 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const xAxisLabel = categoryData.xAxisLabel;
 	const annotation = categoryData.annotation;
 
-	// console.log(companyData)
-
 	const resultWrapper = d3.select('#result-wrapper');
 
 	const resultContainer = resultWrapper.append('div')
