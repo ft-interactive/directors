@@ -31,7 +31,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		bottom: 20,
 	};
 
-	const graphWidth = resultContainer.node().offsetWidth - margins.left - margins.right;
+	const graphWidth = resultContainer.node().offsetWidth/2 - margins.left - margins.right;
 	const graphHeight = 150 - margins.top - margins.bottom;
 
 	const resultChart = resultContainer.append('svg')
@@ -95,9 +95,24 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('width', d => y(d.length))
 		.attr('height', x(bins[0].x0) - x(bins[0].x1)+1);
 
-	// const barText = bar.append('text')
-	// 	.attr('class', 'bar-labels')
-	// 	.attr('transform', `translate(${x(bins[0].x1) - x(bins[0].x0) + 5},14)`);
+	const barText = bar.append('text')
+		.attr('class', 'bar-labels')
+		.attr('transform', d => {
+			return `translate(${y(d.length) + 5},11)`
+		})
+		.text(d => {
+			let labelText = [];
+			if (companyData && Number(companyData[categoryColumn]) > d.x0 && Number(companyData[categoryColumn]) <= d.x1) {
+				labelText.push(`${companyData.name} ${d3.format('.1f')(companyData[categoryColumn])}`);
+			}
+			if (companyData && Number(companyData[`industry${categoryName}`]) >= d.x0 && Number(companyData[`industry${categoryName}`]) < d.x1) {
+				labelText.push(`${companyData.industry} ${d3.format('.1f')(companyData[`industry${categoryName}`])}`);
+			}
+			if (companyData && Number(companyData[`country${categoryName}`]) >= d.x0 && Number(companyData[`country${categoryName}`]) < d.x1) {
+				labelText.push(`${companyData.country} ${d3.format('.1f')(companyData[`country${categoryName}`])}`);
+			}
+			return labelText.join(', ');
+		});
 
 	// barText.append('tspan')
 	// 	.text(d => {
