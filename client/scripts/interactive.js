@@ -208,7 +208,11 @@ function displayCharts(error, data, companyName) {
 			source: companyList,
 		});
 
-		$('#companyname-search').trigger('keydown');
+		$('#companyname-search').bind('autocompleteselect', function () {
+			console.log('hi', $(this))
+			const companyName = $(this).val();
+			displayCharts('blah', dataset, companyName);
+		});
 	}
 
 	let companyData = {};
@@ -248,6 +252,13 @@ $('#companyname-search').on('change', function () {
 	displayCharts('blah', dataset, companyName);
 });
 
+$('#companyname-search').on('keypress', function (e) {
+	if (e.keyCode === 13) {
+		const companyName = $(this).val();
+		displayCharts('blah', dataset, companyName);
+	}
+});
+
 $('#interactive-search').on('click', () => {
 	const companyName = $('#companyname-search').val();
 	displayCharts('blah', dataset, companyName);
@@ -258,3 +269,9 @@ $('#random-search').on('click', () => {
 	const companyName = dataset[randomCompanyIndex].name;
 	displayCharts('blah', dataset, companyName);
 });
+
+$('#companyname-search').on('autocoompletechange', function () {
+	const companyName = $(this).val();
+	displayCharts('blah', dataset, companyName);
+});
+
