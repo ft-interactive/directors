@@ -100,7 +100,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	bar.append('rect')
 		.attr('x', 1)
 		.attr('width', x(bins[0].x1) - x(bins[0].x0) - 1)
-		.attr('height', d => graphHeight - y(d.length));
+		.attr('height', d => Math.max(1, graphHeight - y(d.length)));
 
 	annotationGroup.selectAll('text.bar-labels')
 		.data(bins)
@@ -128,7 +128,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('y2', graphHeight + 35);
 
 	annotationGroup.selectAll('line.bar-lines-horizontal')
-		.data([Number(companyData[`industry${categoryName}`]), Number(companyData[`country${categoryName}`])].sort(function(a, b) { return +a - +b; }))
+		.data([Number(companyData[`industry${categoryName}`]), Number(companyData[`country${categoryName}`])].sort((a, b) => +a - +b))
 		.enter().append('line')
 		.attr('class', 'bar-lines bar-lines-horizontal')
 		.attr('x1', d => `${x(d)}`)
@@ -204,12 +204,11 @@ function displayCharts(error, data, companyName) {
 
 	if (error !== 'blah') { // hack
 		const companyList = _.pluck(dataset, 'name');
-		const autocomplete = $('#companyname-search').autocomplete({
+		$('#companyname-search').autocomplete({
 			source: companyList,
 		});
 
 		$('#companyname-search').bind('autocompleteselect', function () {
-			console.log('hi', $(this))
 			const companyName = $(this).val();
 			displayCharts('blah', dataset, companyName);
 		});
@@ -231,6 +230,16 @@ function displayCharts(error, data, companyName) {
 			resultWrapper.append('div')
 				.attr('class', 'result-sectorName')
 				.text(`Sector: ${companyData.industry}`);
+
+			resultWrapper.append('div')
+				.attr('class', 'result-sectorName')
+				.text(`Market cap: $${d3.format('.1f')(companyData.cap)}bn`);
+
+			resultWrapper.append('div')
+				.attr('class', 'result-sectorName')
+				.attr('id', 'country')
+				.text(`Country: ${companyData.country}`);
+
 			for (const category in categories) {
 				if (categories.hasOwnProperty(category)) {
 					drawCategoryChart(categories[category], data, companyData);
