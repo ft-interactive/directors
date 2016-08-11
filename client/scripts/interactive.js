@@ -6,6 +6,10 @@ d3.queue()
 	.defer(d3.csv, 'data/sortabletable.csv')
 	.await(displayCharts);
 
+function round1dp(x) {
+	return Math.round(x * 10) / 10;
+}
+
 function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const categoryName = categoryData.header;
 	const chartTitle = categoryData.chartTitle;
@@ -138,12 +142,12 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('y', -8)
 		.text(d => {
 			if (companyData && Number(companyData[categoryColumn]) > d.x0 && Number(companyData[categoryColumn]) <= d.x1) {
-				chartDescription.text(`The average for ${companyData.name} is ${d3.format('.1f')(companyData[categoryColumn])} ${xAxisLabel}.`);
-				return `${d3.format('.1f')(companyData[categoryColumn])}`;
+				chartDescription.text(`The average for ${companyData.name} is ${round1dp(companyData[categoryColumn])} ${xAxisLabel}.`);
+				return `${round1dp(companyData[categoryColumn])}`;
 			}
 			if (companyData && Number(companyData[categoryColumn]) === 0 && d.x0 === 0) {
-				chartDescription.text(`The average for ${companyData.name} is ${d3.format('.1f')(companyData[categoryColumn])} ${xAxisLabel}.`);
-				return `${d3.format('.1f')(companyData[categoryColumn])}`;
+				chartDescription.text(`The average for ${companyData.name} is ${round1dp(companyData[categoryColumn])} ${xAxisLabel}.`);
+				return `${round1dp(companyData[categoryColumn])}`;
 			}
 		})
 		.attr('transform', d => `translate(${x(d.x0)},${y(d.length)})`);
@@ -201,7 +205,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 			.attr('x', 0);
 
 		sectorCountryLabel.append('tspan')
-			.text(d => d3.format('.1f')(d.value))
+			.text(d => round1dp(d.value))
 			.attr('dy', '1em')
 			.attr('x', 0);
 	}
@@ -293,7 +297,7 @@ function displayCharts(error, data, companyName) {
 
 				resultWrapper.append('div')
 					.attr('class', 'result-sectorName')
-					.text(`Market cap: $${d3.format('.1f')(companyData.cap)}bn`);
+					.text(`Market cap: $${round1dp(companyData.cap)}bn`);
 
 				resultWrapper.append('div')
 					.attr('class', 'result-sectorName')
