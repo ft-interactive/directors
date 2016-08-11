@@ -91,6 +91,10 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.data(bins)
 		.enter().append('g')
 		.attr('class', 'bar')
+		.attr('transform', d => `translate(${x(d.x0)},${y(d.length)})`);
+
+	bar.append('rect')
+		.attr('x', 1)
 		.attr('fill', d => {
 			if (companyData && Number(companyData[categoryColumn]) > d.x0 && Number(companyData[categoryColumn]) <= d.x1) {
 				return '#A5526A';
@@ -100,12 +104,13 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 			}
 			return '#cec6b9';
 		})
-		.attr('transform', d => `translate(${x(d.x0)},${y(d.length)})`);
-
-	bar.append('rect')
-		.attr('x', 1)
 		.attr('width', x(bins[0].x1) - x(bins[0].x0) - 1)
-		.attr('height', d => Math.max(1, graphHeight - y(d.length)));
+		.attr('height', d => {
+			if (d.length < 3) {
+				return graphHeight - y(d.length);
+			}
+			return graphHeight - y(d.length);
+		});
 
 	annotationGroup.selectAll('text.bar-labels')
 		.data(bins)
@@ -192,7 +197,6 @@ function displayCharts(error, data, companyName) {
 			column: 'avgTenure',
 			xAxisLabel: 'years',
 			threshold: 9,
-			annotation: '',
 		},
 		age: {
 			chartTitle: 'Age',
@@ -200,7 +204,6 @@ function displayCharts(error, data, companyName) {
 			column: 'avgAge',
 			xAxisLabel: 'years',
 			threshold: 10,
-			annotation: '',
 		},
 		gender: {
 			chartTitle: 'Gender composition',
@@ -208,7 +211,6 @@ function displayCharts(error, data, companyName) {
 			column: 'percentWomen',
 			xAxisLabel: 'per cent female',
 			threshold: 9,
-			annotation: '',
 		},
 	};
 
@@ -216,6 +218,15 @@ function displayCharts(error, data, companyName) {
 		const companyList = _.pluck(dataset, 'name');
 		$('#companyname-search').autocomplete({
 			source: companyList,
+			minLength: 2,
+			delay: 500,
+			select: function (e, ui) {
+				if (ui.item) {
+					$(e.target).val(ui.item.value);
+				}
+				const companyName = $(this).val();
+				displayCharts('blah', dataset, companyName);
+			},
 		});
 
 		$('#companyname-search').bind('autocompleteselect', function () {
@@ -253,7 +264,7 @@ function displayCharts(error, data, companyName) {
 			} else {
 				resultWrapper.append('div')
 					.attr('class', 'result-sectorName-global')
-					.text(`Includes companies with a market cap of at least $2m in 10 sectors and 29 countries`);
+					.text(`Includes widely-held companies in 10 sectors and 29 countries`);
 
 				resultWrapper.append('div')
 					.attr('class', 'result-sectorName-global-hide')
@@ -302,6 +313,8 @@ $('#random-search').on('click', () => {
 	const randomCompanyIndex = Math.floor(Math.random() * dataset.length);
 	const companyName = dataset[randomCompanyIndex].name;
 	displayCharts('blah', dataset, companyName);
+
+	$('#companyname-search').val('');
 });
 
 $('#companyname-search').on('autocoompletechange', function () {

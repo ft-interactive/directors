@@ -1,3 +1,10 @@
+.ui-autocomplete {
+	max-height: 200px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+}
+
 #explore-interactive {
 	margin: 2.0rem auto 10px;
     max-width: 620px;
@@ -41,7 +48,8 @@
     	font-size: 1.3em;
     }
 
-    .result-sectorName {
+    .result-sectorName,
+    .result-sectorName-global {
     	color: #777;
     }
 
@@ -74,7 +82,7 @@
 			.bar-labels {
 				stroke: #333;
 				font-size: 14px;
-				font-weight: 500;
+				font-weight: 400;
 			}
 
 			.bar-labels-sectorCountry {
