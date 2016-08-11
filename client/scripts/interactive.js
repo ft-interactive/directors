@@ -64,7 +64,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('class', 'result-chart-container')
 		.attr('width', graphWidth + margins.left + margins.right)
 		.attr('height', graphHeight + margins.top + margins.right)
-		.attr('aria-labelledby', 'title');
+		.attr('aria-labelledby', 'title desc');
 
 	resultChart.append('title') // add title for accessibility
 		.text(`Distribution of ${chartTitle}`);
