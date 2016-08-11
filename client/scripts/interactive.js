@@ -36,7 +36,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const margins = {
 		left: 20,
 		right: 20,
-		top: 10,
+		top: 25,
 		bottom: 20,
 	};
 
@@ -232,6 +232,10 @@ function displayCharts(error, data, companyName) {
 		$('#companyname-search').bind('autocompleteselect', function () {
 			const companyName = $(this).val();
 			displayCharts('blah', dataset, companyName);
+		});
+
+		$(window).resize(() => {
+			_.debounce(displayCharts('blah', dataset, $('.result-companyName').text()), 300);
 		});
 	}
 

@@ -112,3 +112,14 @@
 		font-size: 14px;
 	}
 }
+
+@media (max-width: 600px) {
+	#explore-interactive input {
+		width: 100%;
+		margin-bottom: 0.5em;
+	}
+
+	#explore-interactive .result-container { 
+		width: 100%;
+	}
+}
