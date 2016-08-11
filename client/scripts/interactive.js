@@ -12,8 +12,6 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const categoryColumn = categoryData.column;
 	const xAxisLabel = categoryData.xAxisLabel;
 
-	console.log(companyData);
-
 	const resultWrapper = d3.select('#result-wrapper');
 
 	const resultContainer = resultWrapper.append('div')
@@ -46,12 +44,14 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const annotationGroup = resultChart.append('g')
 		.attr('width', graphWidth)
 		.attr('height', graphHeight)
-		.attr('transform', `translate(${margins.left},${margins.top})`);
+		.attr('transform', `translate(${margins.left},${margins.top})`)
+		.attr('id', 'annotationLayer');
 
 	const resultChartGroup = resultChart.append('g')
 		.attr('width', graphWidth)
 		.attr('height', graphHeight)
-		.attr('transform', `translate(${margins.left},${margins.top})`);
+		.attr('transform', `translate(${margins.left},${margins.top})`)
+		.attr('id', 'chartLayer');
 
 	let data = _.pluck(spreadsheetData, categoryColumn);
 	data = _.map(data, num => Number(num));
@@ -115,52 +115,61 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		})
 		.attr('transform', d => `translate(${x(d.x0)},${y(d.length)})`);
 
-	const sectorLabel = annotationGroup.selectAll('text.bar-labels')
-		.data(bins)
+	// lines to label sector and country
+	annotationGroup.selectAll('line.bar-lines-vertical')
+		.data([companyData[`industry${categoryName}`], companyData[`country${categoryName}`]])
+		.enter().append('line')
+		.attr('class', 'bar-lines bar-lines-vertical')
+		.attr('x1', d => `${x(d)}`)
+		.attr('x2', d => `${x(d)}`)
+		.attr('y1', graphHeight)
+		.attr('y2', graphHeight + 35);
+
+	annotationGroup.selectAll('line.bar-lines-horizontal')
+		.data([companyData[`industry${categoryName}`], companyData[`country${categoryName}`]].sort())
+		.enter().append('line')
+		.attr('class', 'bar-lines bar-lines-horizontal')
+		.attr('x1', d => `${x(d)}`)
+		.attr('x2', (d, i) => {
+			if (i === 0) {
+				return `${x(d) - 10}`;
+			}
+			return `${x(d) + 10}`;
+		})
+		.attr('y1', graphHeight + 35)
+		.attr('y2', graphHeight + 35);
+
+	const sectorCountryLabel = annotationGroup.selectAll('text.bar-labels.sectorCountry')
+		.data(_.sortBy([{
+			name: 'Sector',
+			value: companyData[`industry${categoryName}`],
+		}, {
+			name: companyData.country,
+			value: companyData[`country${categoryName}`],
+		}], 'value'))
 		.enter().append('text')
-		.attr('class', 'bar-labels')
+		.attr('class', 'bar-labels bar-labels-sectorCountry')
 		.attr('y', -8)
-		.attr('transform', d => `translate(${x(d.x0)},${y(d.length)})`)
-
-	sectorLabel.append('tspan')
-		.text(d => {
-			if (companyData && Number(companyData[`industry${categoryName}`]) >= d.x0 && Number(companyData[`industry${categoryName}`]) < d.x1) {
-				return 'Sector';
+		.attr('transform', (d, i) => {
+			if (i === 0) {
+				return `translate(${x(d.value) - 12},${graphHeight + 46})`;
+			}
+			return `translate(${x(d.value) + 12},${graphHeight + 46})`;
+		})
+		.attr('text-anchor', (d, i) => {
+			if (i === 0) {
+				return 'end';
 			}
 		});
 
-	sectorLabel.append('tspan')
-		.text(d => {
-			if (companyData && Number(companyData[`industry${categoryName}`]) >= d.x0 && Number(companyData[`industry${categoryName}`]) < d.x1) {
-				return `${d3.format('.1f')(companyData[`industry${categoryName}`])}`;
-			}
-		});
+	sectorCountryLabel.append('tspan')
+		.text(d => d.name)
+		.attr('x', 0);
 
-	// barText.append('tspan')
-	// 	.text(d => {
-	// 		if (companyData && Number(companyData[categoryColumn]) > d.x0 && Number(companyData[categoryColumn]) <= d.x1) {
-	// 			return `${companyData.name} ${d3.format('.1f')(companyData[categoryColumn])}`;
-	// 		}
-	// 	})
-	// 	.attr('x', 0);
-
-	// barText.append('tspan')
-	// 	.text(d => {
-	// 		if (companyData && Number(companyData[`industry${categoryName}`]) >= d.x0 && Number(companyData[`industry${categoryName}`]) < d.x1) {
-	// 			return `${companyData.industry} ${d3.format('.1f')(companyData[`industry${categoryName}`])}`;
-	// 		}
-	// 	})
-	// 	.attr('x', 0)
-	// 	.attr('dy', '1em');
-
-	// barText.append('tspan')
-	// 	.text(d => {
-	// 		if (companyData && Number(companyData[`country${categoryName}`]) >= d.x0 && Number(companyData[`country${categoryName}`]) < d.x1) {
-	// 			return `${companyData.country} ${d3.format('.1f')(companyData[`country${categoryName}`])}`;
-	// 		}
-	// 	})
-	// 	.attr('x', 0)
-	// 	.attr('dy', '1em');
+	sectorCountryLabel.append('tspan')
+		.text(d => d3.format('.1f')(d.value))
+		.attr('dy', '1em')
+		.attr('x', 0);
 }
 
 function displayCharts(error, data, companyName) {

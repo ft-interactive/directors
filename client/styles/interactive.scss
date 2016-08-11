@@ -42,7 +42,7 @@
 	.result-container {
 		width: 32.6%;
 		display: inline-block;
-		margin-bottom: 1em;
+		margin-bottom: 3em;
 
 		.result-header {
 			font-weight: 600;
@@ -63,13 +63,21 @@
 			.bar-labels {
 				stroke: #333;
 				font-size: 14px;
+				font-weight: 500;
+			}
+
+			.bar-labels-sectorCountry {
 				font-weight: 100;
+			}
+
+			.bar-lines {
+				stroke: #333;
 			}
 
 			.tick {
 				font-family: MetricWeb, sans-serif;
 				font-size: 14px;
-				stroke: #333;
+				stroke: #777;
 				font-weight: 100;
 			}
 		}
