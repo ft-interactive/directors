@@ -27,12 +27,12 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const margins = {
 		left: 20,
 		right: 20,
-		top: 40,
+		top: 20,
 		bottom: 20,
 	};
 
 	const graphWidth = resultContainer.node().offsetWidth - margins.left - margins.right;
-	const graphHeight = 200 - margins.top - margins.bottom;
+	const graphHeight = 150 - margins.top - margins.bottom;
 
 	const resultChart = resultContainer.append('svg')
 		.attr('class', 'result-chart-container')
@@ -49,7 +49,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 
 	const x = d3.scaleLinear()
 		.domain(d3.extent(data))
-		.rangeRound([0, graphWidth])
+		.rangeRound([graphHeight, 0])
 		.nice();
 
 	console.log(x.ticks(5))
@@ -58,14 +58,14 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.domain(x.domain())
 		.thresholds(9)(data);
 
-	const xAxis = d3.axisBottom(x);
+	const xAxis = d3.axisLeft(x);
 
 	const y = d3.scaleLinear()
 		.domain([0, d3.max(bins, d => d.length)])
-		.range([graphHeight, 0]);
+		.range([0, graphWidth]);
 
 	resultChartGroup.append('g')
-		.attr('transform', `translate(0,${graphHeight})`)
+		.attr('transform', `translate(0,0)`)
 		.call(xAxis);
 
 	resultContainer.append('div')
@@ -88,42 +88,42 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 			}
 			return '#cec6b9';
 		})
-		.attr('transform', d => `translate(${x(d.x0)},${y(d.length)})`);
+		.attr('transform', d => `translate(0,  ${x(d.x1)})`);
 
 	bar.append('rect')
-		.attr('x', 1)
-		.attr('width', x(bins[0].x1) - x(bins[0].x0) - 1)
-		.attr('height', d => graphHeight - y(d.length));
+		.attr('y', 0)
+		.attr('width', d => y(d.length))
+		.attr('height', x(bins[0].x0) - x(bins[0].x1)+1);
 
-	const barText = bar.append('text')
-		.attr('class', 'bar-labels')
-		.attr('transform', `translate(${x(bins[0].x1) - x(bins[0].x0) + 5},14)`);
+	// const barText = bar.append('text')
+	// 	.attr('class', 'bar-labels')
+	// 	.attr('transform', `translate(${x(bins[0].x1) - x(bins[0].x0) + 5},14)`);
 
-	barText.append('tspan')
-		.text(d => {
-			if (companyData && Number(companyData[categoryColumn]) > d.x0 && Number(companyData[categoryColumn]) <= d.x1) {
-				return `${companyData.name} ${d3.format('.1f')(companyData[categoryColumn])}`;
-			}
-		})
-		.attr('x', 0);
+	// barText.append('tspan')
+	// 	.text(d => {
+	// 		if (companyData && Number(companyData[categoryColumn]) > d.x0 && Number(companyData[categoryColumn]) <= d.x1) {
+	// 			return `${companyData.name} ${d3.format('.1f')(companyData[categoryColumn])}`;
+	// 		}
+	// 	})
+	// 	.attr('x', 0);
 
-	barText.append('tspan')
-		.text(d => {
-			if (companyData && Number(companyData[`industry${categoryName}`]) >= d.x0 && Number(companyData[`industry${categoryName}`]) < d.x1) {
-				return `${companyData.industry} ${d3.format('.1f')(companyData[`industry${categoryName}`])}`;
-			}
-		})
-		.attr('x', 0)
-		.attr('dy', '1em');
+	// barText.append('tspan')
+	// 	.text(d => {
+	// 		if (companyData && Number(companyData[`industry${categoryName}`]) >= d.x0 && Number(companyData[`industry${categoryName}`]) < d.x1) {
+	// 			return `${companyData.industry} ${d3.format('.1f')(companyData[`industry${categoryName}`])}`;
+	// 		}
+	// 	})
+	// 	.attr('x', 0)
+	// 	.attr('dy', '1em');
 
-	barText.append('tspan')
-		.text(d => {
-			if (companyData && Number(companyData[`country${categoryName}`]) >= d.x0 && Number(companyData[`country${categoryName}`]) < d.x1) {
-				return `${companyData.country} ${d3.format('.1f')(companyData[`country${categoryName}`])}`;
-			}
-		})
-		.attr('x', 0)
-		.attr('dy', '1em');
+	// barText.append('tspan')
+	// 	.text(d => {
+	// 		if (companyData && Number(companyData[`country${categoryName}`]) >= d.x0 && Number(companyData[`country${categoryName}`]) < d.x1) {
+	// 			return `${companyData.country} ${d3.format('.1f')(companyData[`country${categoryName}`])}`;
+	// 		}
+	// 	})
+	// 	.attr('x', 0)
+	// 	.attr('dy', '1em');
 }
 
 function displayCharts(error, data, companyName) {
