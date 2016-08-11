@@ -43,17 +43,17 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('width', graphWidth + margins.left + margins.right)
 		.attr('height', graphHeight + margins.top + margins.right);
 
-	const annotationGroup = resultChart.append('g')
-		.attr('width', graphWidth)
-		.attr('height', graphHeight)
-		.attr('transform', `translate(${margins.left},${margins.top})`)
-		.attr('id', 'annotationLayer');
-
 	const resultChartGroup = resultChart.append('g')
 		.attr('width', graphWidth)
 		.attr('height', graphHeight)
 		.attr('transform', `translate(${margins.left},${margins.top})`)
 		.attr('id', 'chartLayer');
+
+	const annotationGroup = resultChart.append('g')
+		.attr('width', graphWidth)
+		.attr('height', graphHeight)
+		.attr('transform', `translate(${margins.left},${margins.top})`)
+		.attr('id', 'annotationLayer');		
 
 	let data = _.pluck(spreadsheetData, categoryColumn);
 	data = _.map(data, num => Number(num));
