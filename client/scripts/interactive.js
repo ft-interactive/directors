@@ -40,12 +40,12 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 
 	if (resultContainer.node().offsetWidth < 250) {
 		if (categoryName === 'Tenure') {
-			margins.left = 55;
-			margins.right = 15;
+			margins.left = 57;
+			margins.right = 13;
 		}
 		if (categoryName === 'Age') {
-			margins.left = 55;
-			margins.right = 15;
+			margins.left = 58;
+			margins.right = 13;
 		}
 		if (categoryName === 'Women') {
 			margins.left = 70;
