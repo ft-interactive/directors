@@ -71,6 +71,8 @@
     <script src="//d3js.org/d3.v4.0.0-alpha.45.min.js"></script>
     <script src="https://d3js.org/d3-queue.v3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 
     <!-- FT tracking module 1.2.5 -->
     <script src="https://h2.ft.com/static-render-p.ft.com/scripts/a03ca392/bundles/tracking.js" async></script>
@@ -701,16 +703,18 @@
               </div>
               </div>
               </div> -->
-         		<div id="explore-interactive">
-         			<h2 class="subhead subhead--crosshead">Interactive: How does your company rank?</h2>
-         			<p><label for="companyname">Search for your company to see how it compares to others in the same sector and country.</label></p>
-         			<input type="text" name="companyname" placeholder="e.g. Your company, Apple" />
-         			<button id="interactive-search">Search</button>
-              <p id="interactive-search-suggestions">or view <span class="interactive-search-suggestion">Apple</span>, <span class="interactive-search-suggestion">Cheesecake Factory</span> or <span class="interactive-search-suggestion">Danaher</span></p>
-         			<div id="result-wrapper">
+            <div id="explore-interactive">
+              <h2>Interactive: How does your company rank?</h2>
+              <p><label for="companyname">Search for your company to see how it compares to others in the same sector and country.</label></p>
+              <input type="text" name="companyname" id="companyname-search" placeholder="e.g. Your company, Apple" />
+              <button id="interactive-search">Search</button>
+              <button id="random-search">Random</button>
+              <p id="interactive-search-suggestions">or view <span class="interactive-search-suggestion" data-companyname="Apple Inc.">Apple</span>, <span class="interactive-search-suggestion" data-companyname="HSBC Holdings plc">HSBC</span> or <span class="interactive-search-suggestion" data-companyname="Bayer AG">Bayer</span></p>
+              <p id="error-nocompany">This company does not exist in our dataset. Please try again.</p>
+              <div id="result-wrapper">
 
-         			</div>
-         		</div>
+              </div>
+            </div>
 
             <div class="link-container">
               <p ><a class="page-links" href="data.html">About the data</a></p>
@@ -737,8 +741,6 @@
           </div>
         </div>
       </div>
-
-
     </main>
 
     <footer class="footer" role="contentinfo">

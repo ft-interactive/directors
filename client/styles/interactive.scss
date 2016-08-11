@@ -10,7 +10,6 @@
 
     #interactive-search-suggestions {
     	margin-top: 0em;
-    	margin-bottom: 2em;
     	font-size: 14px;
     	font-family: MetricWeb, sans-serif;
 
@@ -20,6 +19,14 @@
 		    border-bottom: 1px dotted #27757b;
 		    text-decoration: none;
     	}
+    }
+
+    #error-nocompany {
+    	height: 0;
+    	overflow: hidden;
+    	margin-top: 0;
+    	margin-bottom: 1em;
+    	color: #c00;
     }
 
     button {
@@ -40,9 +47,9 @@
     }
 
 	.result-container {
-		width: 100%;
+		width: 32.6%;
 		display: inline-block;
-		margin-bottom: 0;
+		margin-bottom: 3em;
 
 		.result-header {
 			font-weight: 600;
@@ -63,13 +70,21 @@
 			.bar-labels {
 				stroke: #333;
 				font-size: 14px;
+				font-weight: 500;
+			}
+
+			.bar-labels-sectorCountry {
 				font-weight: 100;
+			}
+
+			.bar-lines {
+				stroke: #333;
 			}
 
 			.tick {
 				font-family: MetricWeb, sans-serif;
 				font-size: 14px;
-				stroke: #333;
+				stroke: #777;
 				font-weight: 100;
 			}
 		}
