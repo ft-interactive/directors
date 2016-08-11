@@ -1,4 +1,4 @@
-/* global d3, _ */
+/* global d3, _, $ */
 
 let dataset = [];
 
@@ -11,6 +11,8 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const chartTitle = categoryData.chartTitle;
 	const categoryColumn = categoryData.column;
 	const xAxisLabel = categoryData.xAxisLabel;
+
+	console.log(companyData)
 
 	const resultWrapper = d3.select('#result-wrapper');
 
@@ -88,11 +90,8 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 			if (companyData && Number(companyData[categoryColumn]) > d.x0 && Number(companyData[categoryColumn]) <= d.x1) {
 				return '#A5526A';
 			}
-			if (companyData && Number(companyData[`industry${categoryName}`]) >= d.x0 && Number(companyData[`industry${categoryName}`]) < d.x1) {
-				return '#a7a59b';
-			}
-			if (companyData && Number(companyData[`country${categoryName}`]) >= d.x0 && Number(companyData[`country${categoryName}`]) < d.x1) {
-				return '#a7a59b';
+			if (companyData && Number(companyData[categoryColumn]) === 0 && d.x0 === 0) {
+				return '#A5526A';
 			}
 			return '#cec6b9';
 		})
@@ -103,7 +102,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('width', x(bins[0].x1) - x(bins[0].x0) - 1)
 		.attr('height', d => graphHeight - y(d.length));
 
-	const barText = annotationGroup.selectAll('text.bar-labels')
+	annotationGroup.selectAll('text.bar-labels')
 		.data(bins)
 		.enter().append('text')
 		.attr('class', 'bar-labels')
@@ -202,6 +201,8 @@ function displayCharts(error, data, companyName) {
 
 	let companyData = {};
 	if (companyName) {
+		document.getElementById('result-wrapper').innerHTML = '';
+
 		companyData = _.findWhere(dataset, {name: companyName});
 
 		const resultWrapper = d3.select('#result-wrapper');
@@ -212,11 +213,17 @@ function displayCharts(error, data, companyName) {
 		resultWrapper.append('div')
 			.attr('class', 'result-sectorName')
 			.text(`Sector: ${companyData.industry}`);
-	}
-
-	for (const category in categories) {
-		if (categories.hasOwnProperty(category)) {
-			drawCategoryChart(categories[category], data, companyData);
+		for (const category in categories) {
+			if (categories.hasOwnProperty(category)) {
+				drawCategoryChart(categories[category], data, companyData);
+			}
 		}
 	}
+
 }
+
+$('.interactive-search-suggestion').on('click', function () {
+	const companyName = $(this).data('companyname');
+	displayCharts('', dataset, companyName);
+});
+
