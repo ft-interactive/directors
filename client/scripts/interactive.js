@@ -24,6 +24,10 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('class', 'result-header')
 		.text(chartTitle);
 
+	resultContainer.append('div')
+		.attr('class', 'xAxisLabel')
+		.text(xAxisLabel);
+
 	const margins = {
 		left: 20,
 		right: 20,
@@ -39,6 +43,11 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('width', graphWidth + margins.left + margins.right)
 		.attr('height', graphHeight + margins.top + margins.right);
 
+	const annotationGroup = resultChart.append('g')
+		.attr('width', graphWidth)
+		.attr('height', graphHeight)
+		.attr('transform', `translate(${margins.left},${margins.top})`);
+
 	const resultChartGroup = resultChart.append('g')
 		.attr('width', graphWidth)
 		.attr('height', graphHeight)
@@ -52,13 +61,18 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.rangeRound([graphHeight, 0])
 		.nice();
 
-	console.log(x.ticks(5))
-
 	const bins = d3.histogram()
 		.domain(x.domain())
 		.thresholds(9)(data);
 
-	const xAxis = d3.axisLeft(x);
+
+	const xAxis = d3.axisBottom(x)
+		.tickFormat((d, i) => {
+			if (i % 2 === 0) {
+				return d;
+			}
+		});
+
 
 	const y = d3.scaleLinear()
 		.domain([0, d3.max(bins, d => d.length)])
@@ -67,10 +81,6 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	resultChartGroup.append('g')
 		.attr('transform', `translate(0,0)`)
 		.call(xAxis);
-
-	resultContainer.append('div')
-		.attr('class', 'xAxisLabel')
-		.text(xAxisLabel);
 
 	const bar = resultChartGroup.selectAll('.bar')
 		.data(bins)
@@ -95,14 +105,21 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('width', d => y(d.length))
 		.attr('height', x(bins[0].x0) - x(bins[0].x1)+1);
 
-	const barText = bar.append('text')
+	const barText = annotationGroup.selectAll('text.bar-labels')
+		.data(bins)
+		.enter().append('text')
 		.attr('class', 'bar-labels')
+<<<<<<< HEAD
 		.attr('transform', d => {
 			return `translate(${y(d.length) + 5},11)`
 		})
+=======
+		.attr('y', -8)
+>>>>>>> origin/histogram
 		.text(d => {
 			let labelText = [];
 			if (companyData && Number(companyData[categoryColumn]) > d.x0 && Number(companyData[categoryColumn]) <= d.x1) {
+<<<<<<< HEAD
 				labelText.push(`${companyData.name} ${d3.format('.1f')(companyData[categoryColumn])}`);
 			}
 			if (companyData && Number(companyData[`industry${categoryName}`]) >= d.x0 && Number(companyData[`industry${categoryName}`]) < d.x1) {
@@ -112,6 +129,32 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 				labelText.push(`${companyData.country} ${d3.format('.1f')(companyData[`country${categoryName}`])}`);
 			}
 			return labelText.join(', ');
+=======
+				return `${d3.format('.1f')(companyData[categoryColumn])}`;
+			}
+		})
+		.attr('transform', d => `translate(${x(d.x0)},${y(d.length)})`);
+
+	const sectorLabel = annotationGroup.selectAll('text.bar-labels')
+		.data(bins)
+		.enter().append('text')
+		.attr('class', 'bar-labels')
+		.attr('y', -8)
+		.attr('transform', d => `translate(${x(d.x0)},${y(d.length)})`)
+
+	sectorLabel.append('tspan')
+		.text(d => {
+			if (companyData && Number(companyData[`industry${categoryName}`]) >= d.x0 && Number(companyData[`industry${categoryName}`]) < d.x1) {
+				return 'Sector';
+			}
+		});
+
+	sectorLabel.append('tspan')
+		.text(d => {
+			if (companyData && Number(companyData[`industry${categoryName}`]) >= d.x0 && Number(companyData[`industry${categoryName}`]) < d.x1) {
+				return `${d3.format('.1f')(companyData[`industry${categoryName}`])}`;
+			}
+>>>>>>> origin/histogram
 		});
 
 	// barText.append('tspan')
@@ -172,6 +215,15 @@ function displayCharts(error, data, companyName) {
 	let companyData = {};
 	if (companyName) {
 		companyData = _.findWhere(dataset, {name: companyName});
+
+		const resultWrapper = d3.select('#result-wrapper');
+		resultWrapper.append('div')
+			.attr('class', 'result-companyName')
+			.text(companyName);
+
+		resultWrapper.append('div')
+			.attr('class', 'result-sectorName')
+			.text(`Sector: ${companyData.industry}`);
 	}
 
 	for (const category in categories) {

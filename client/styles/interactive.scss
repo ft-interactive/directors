@@ -30,6 +30,15 @@
     	margin: 1em 0;
     }
 
+    .result-companyName {
+    	font-size: 1.3em;
+    }
+
+    .result-sectorName {
+    	color: #777;
+    	margin-bottom: 2em;
+    }
+
 	.result-container {
 		width: 100%;
 		display: inline-block;
@@ -66,7 +75,6 @@
 		}
 
 		.xAxisLabel {
-			text-align: center;
 			color: #777;
 		}
 	}
