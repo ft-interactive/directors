@@ -7,7 +7,15 @@
 
 #explore-interactive {
 	margin: 2.0rem auto 10px;
-    max-width: 620px;
+    max-width: 980px;
+
+    h2 {
+    	max-width: 980px;
+    }
+
+    p {
+    	max-width: 980px;
+    }
 
     input {
     	width: 250px;
@@ -19,6 +27,8 @@
     	margin-top: 0em;
     	font-size: 14px;
     	font-family: MetricWeb, sans-serif;
+    	text-align: left;
+    	max-width: 920px;
 
     	.interactive-search-suggestion {
     		cursor: pointer;
