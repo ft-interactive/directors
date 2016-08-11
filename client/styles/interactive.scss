@@ -1,0 +1,81 @@
+#explore-interactive {
+	margin: 2.0rem auto 10px;
+    max-width: 620px;
+
+    input {
+    	width: 250px;
+    	margin: 1em 0 0 0;
+    	font-size: 1.3em;
+    }
+
+    #interactive-search-suggestions {
+    	margin-top: 0em;
+    	margin-bottom: 2em;
+    	font-size: 14px;
+    	font-family: MetricWeb, sans-serif;
+
+    	.interactive-search-suggestion {
+    		cursor: pointer;
+		    color: #27757b;
+		    border-bottom: 1px dotted #27757b;
+		    text-decoration: none;
+    	}
+    }
+
+    button {
+    	font-size: 1.3em;
+    }
+
+    #result-wrapper {
+    	margin: 1em 0;
+    }
+
+    .result-companyName {
+    	font-size: 1.3em;
+    }
+
+    .result-sectorName {
+    	color: #777;
+    	margin-bottom: 2em;
+    }
+
+	.result-container {
+		width: 100%;
+		display: inline-block;
+		margin-bottom: 0;
+
+		.result-header {
+			font-weight: 600;
+			font-size: 0.9em;
+			color: #333;
+			text-transform: uppercase;
+		}
+
+		.result-chart-container {
+			position: relative;
+			margin-right: 20px;
+			overflow: visible;
+
+			.bar rect{
+				stroke-width: 0;
+			}
+
+			.bar-labels {
+				stroke: #333;
+				font-size: 14px;
+				font-weight: 100;
+			}
+
+			.tick {
+				font-family: MetricWeb, sans-serif;
+				font-size: 14px;
+				stroke: #333;
+				font-weight: 100;
+			}
+		}
+
+		.xAxisLabel {
+			color: #777;
+		}
+	}
+}

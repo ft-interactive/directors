@@ -155,7 +155,8 @@ gulp.task('serve', ['styles'], function (done) {
 				routes: {
 					'/bower_components': 'bower_components'
 				}
-			}
+			},
+			ghostMode: false,
 		});
 
 		// refresh browser after other changes
@@ -252,6 +253,7 @@ gulp.task('deploy', done => {
 // helpers
 let preventNextReload; // hack to keep a BS error notification on the screen
 function reload() {
+	return;
 	if (preventNextReload) {
 		preventNextReload = false;
 		return;
