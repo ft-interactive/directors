@@ -33,12 +33,25 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('class', 'annotation')
 		.text(annotation);
 
-	const margins = {
+	let margins = {
 		left: 20,
 		right: 20,
 		top: 25,
 		bottom: 20,
 	};
+
+	if (resultContainer.node().offsetWidth < 250) {
+		if (categoryName === 'Women') {
+			margins.left = 40;
+		}
+		if (categoryName === 'Age') {
+			margins.left = 30;
+			margins.right = 30;
+		}
+		if (categoryName === 'Tenure') {
+			margins.right = 40;
+		}
+	}
 
 	const graphWidth = resultContainer.node().offsetWidth - margins.left - margins.right;
 	const graphHeight = 200 - margins.top - margins.bottom;
