@@ -761,12 +761,12 @@ section li {
 }
 
 .link-container{
-  display: flex;
-  flex-direction:column;
-  justify-content:center;
-  max-width: 320px;
-  text-align: center;
-  margin: 0 auto 20px;
+  max-width: 620px;
+  text-align: right;
+  margin: 0 auto 30px;
+  p.data-link {
+    text-align: right;
+  }
 }
 
 article{
