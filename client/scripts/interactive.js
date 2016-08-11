@@ -31,7 +31,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('class', 'annotation')
 		.text(annotation);
 
-	let margins = {
+	const margins = {
 		left: 20,
 		right: 20,
 		top: 25,
@@ -265,20 +265,7 @@ function displayCharts(error, data, companyName) {
 				.attr('class', 'result-companyName')
 				.text(companyName);
 
-			if (companyName !== 'Global average') {
-				resultWrapper.append('div')
-					.attr('class', 'result-sectorName')
-					.text(`Sector: ${companyData.industry}`);
-
-				resultWrapper.append('div')
-					.attr('class', 'result-sectorName')
-					.text(`Market cap: $${d3.format('.1f')(companyData.cap)}bn`);
-
-				resultWrapper.append('div')
-					.attr('class', 'result-sectorName')
-					.attr('id', 'country')
-					.text(`Country: ${companyData.country}`);
-			} else {
+			if (companyName === 'Global average') {
 				resultWrapper.append('div')
 					.attr('class', 'result-sectorName-global')
 					.text(`Includes widely-held companies in 10 sectors and 29 countries`);
@@ -291,6 +278,19 @@ function displayCharts(error, data, companyName) {
 					.attr('class', 'result-sectorName-global-hide')
 					.attr('id', 'country')
 					.text(`.`);
+			} else {
+				resultWrapper.append('div')
+					.attr('class', 'result-sectorName')
+					.text(`Sector: ${companyData.industry}`);
+
+				resultWrapper.append('div')
+					.attr('class', 'result-sectorName')
+					.text(`Market cap: $${d3.format('.1f')(companyData.cap)}bn`);
+
+				resultWrapper.append('div')
+					.attr('class', 'result-sectorName')
+					.attr('id', 'country')
+					.text(`Country: ${companyData.country}`);
 			}
 
 			for (const category in categories) {
