@@ -128,7 +128,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 		.attr('y2', graphHeight + 35);
 
 	annotationGroup.selectAll('line.bar-lines-horizontal')
-		.data([companyData[`industry${categoryName}`], companyData[`country${categoryName}`]].sort())
+		.data([Number(companyData[`industry${categoryName}`]), Number(companyData[`country${categoryName}`])].sort(function(a, b) { return +a - +b; }))
 		.enter().append('line')
 		.attr('class', 'bar-lines bar-lines-horizontal')
 		.attr('x1', d => `${x(d)}`)
@@ -144,10 +144,10 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const sectorCountryLabel = annotationGroup.selectAll('text.bar-labels.sectorCountry')
 		.data(_.sortBy([{
 			name: 'Sector',
-			value: companyData[`industry${categoryName}`],
+			value: Number(companyData[`industry${categoryName}`]),
 		}, {
 			name: companyData.country,
-			value: companyData[`country${categoryName}`],
+			value: Number(companyData[`country${categoryName}`]),
 		}], 'value'))
 		.enter().append('text')
 		.attr('class', 'bar-labels bar-labels-sectorCountry')
