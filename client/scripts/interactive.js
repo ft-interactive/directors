@@ -41,15 +41,17 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	};
 
 	if (resultContainer.node().offsetWidth < 250) {
-		if (categoryName === 'Women') {
-			margins.left = 40;
+		if (categoryName === 'Tenure') {
+			margins.left = 55;
+			margins.right = 15;
 		}
 		if (categoryName === 'Age') {
-			margins.left = 30;
-			margins.right = 30;
+			margins.left = 55;
+			margins.right = 15;
 		}
-		if (categoryName === 'Tenure') {
-			margins.right = 40;
+		if (categoryName === 'Women') {
+			margins.left = 70;
+			margins.right = 0;
 		}
 	}
 
