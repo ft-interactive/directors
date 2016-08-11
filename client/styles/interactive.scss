@@ -10,7 +10,6 @@
 
     #interactive-search-suggestions {
     	margin-top: 0em;
-    	margin-bottom: 2em;
     	font-size: 14px;
     	font-family: MetricWeb, sans-serif;
 
@@ -20,6 +19,14 @@
 		    border-bottom: 1px dotted #27757b;
 		    text-decoration: none;
     	}
+    }
+
+    #error-nocompany {
+    	height: 0;
+    	overflow: hidden;
+    	margin-top: 0;
+    	margin-bottom: 2em;
+    	color: #c00;
     }
 
     button {

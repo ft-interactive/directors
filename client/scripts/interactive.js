@@ -12,7 +12,7 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 	const categoryColumn = categoryData.column;
 	const xAxisLabel = categoryData.xAxisLabel;
 
-	console.log(companyData)
+	// console.log(companyData)
 
 	const resultWrapper = d3.select('#result-wrapper');
 
@@ -111,6 +111,9 @@ function drawCategoryChart(categoryData, spreadsheetData, companyData) {
 			if (companyData && Number(companyData[categoryColumn]) > d.x0 && Number(companyData[categoryColumn]) <= d.x1) {
 				return `${d3.format('.1f')(companyData[categoryColumn])}`;
 			}
+			if (companyData && Number(companyData[categoryColumn]) === 0 && d.x0 === 0) {
+				return `${d3.format('.1f')(companyData[categoryColumn])}`;
+			}
 		})
 		.attr('transform', d => `translate(${x(d.x0)},${y(d.length)})`);
 
@@ -199,31 +202,59 @@ function displayCharts(error, data, companyName) {
 		},
 	};
 
-	let companyData = {};
-	if (companyName) {
-		document.getElementById('result-wrapper').innerHTML = '';
+	if (error !== 'blah') { // hack
+		const companyList = _.pluck(dataset, 'name');
+		const autocomplete = $('#companyname-search').autocomplete({
+			source: companyList,
+		});
 
-		companyData = _.findWhere(dataset, {name: companyName});
-
-		const resultWrapper = d3.select('#result-wrapper');
-		resultWrapper.append('div')
-			.attr('class', 'result-companyName')
-			.text(companyName);
-
-		resultWrapper.append('div')
-			.attr('class', 'result-sectorName')
-			.text(`Sector: ${companyData.industry}`);
-		for (const category in categories) {
-			if (categories.hasOwnProperty(category)) {
-				drawCategoryChart(categories[category], data, companyData);
-			}
-		}
+		$('#companyname-search').trigger('keydown');
 	}
 
+	let companyData = {};
+	if (companyName) {
+		companyData = _.findWhere(dataset, {name: companyName});
+
+		if (companyData) {
+			document.getElementById('result-wrapper').innerHTML = '';
+			document.getElementById('error-nocompany').style.height = 0;
+
+			const resultWrapper = d3.select('#result-wrapper');
+			resultWrapper.append('div')
+				.attr('class', 'result-companyName')
+				.text(companyName);
+
+			resultWrapper.append('div')
+				.attr('class', 'result-sectorName')
+				.text(`Sector: ${companyData.industry}`);
+			for (const category in categories) {
+				if (categories.hasOwnProperty(category)) {
+					drawCategoryChart(categories[category], data, companyData);
+				}
+			}
+		} else {
+			document.getElementById('error-nocompany').style.height = 'auto';
+		}
+	}
 }
 
 $('.interactive-search-suggestion').on('click', function () {
 	const companyName = $(this).data('companyname');
-	displayCharts('', dataset, companyName);
+	displayCharts('blah', dataset, companyName);
 });
 
+$('#companyname-search').on('change', function () {
+	const companyName = $(this).val();
+	displayCharts('blah', dataset, companyName);
+});
+
+$('#interactive-search').on('click', () => {
+	const companyName = $('#companyname-search').val();
+	displayCharts('blah', dataset, companyName);
+});
+
+$('#random-search').on('click', () => {
+	const randomCompanyIndex = Math.floor(Math.random() * dataset.length);
+	const companyName = dataset[randomCompanyIndex].name;
+	displayCharts('blah', dataset, companyName);
+});
