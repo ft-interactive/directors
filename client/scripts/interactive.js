@@ -280,7 +280,7 @@ function displayCharts(error, data, companyName) {
 			if (companyName === 'Global average') {
 				resultWrapper.append('div')
 					.attr('class', 'result-sectorName-global')
-					.text(`Includes widely-held companies in 10 sectors and 29 countries`);
+					.text(`Includes widely-held companies in 10 sectors and 30 markets`);
 
 				resultWrapper.append('div')
 					.attr('class', 'result-sectorName-global-hide')
@@ -302,7 +302,7 @@ function displayCharts(error, data, companyName) {
 				resultWrapper.append('div')
 					.attr('class', 'result-sectorName')
 					.attr('id', 'country')
-					.text(`Country: ${companyData.country}`);
+					.text(`Market: ${companyData.country}`);
 			}
 
 			for (const category in categories) {

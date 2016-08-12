@@ -1,15 +1,12 @@
-function toggle_visibility(e) 
-{
-    if (e.target.id == "buttonten"){
-    	document.getElementById("top10").className += ' showten';
-    } else {
-    	document.getElementById("top10").className = document.getElementById("top10").className.replace(/ showten/g,'');
-    }
-     
+/* global $ */
+
+function toggleVisibility(e) {
+	if (e.target.id === 'buttonten') {
+		$('#top10').addClass('showten');
+	} else {
+		$('#top10').removeClass('showten');
+	}
 }
 
-
-
-document.getElementById("buttonten").onclick = toggle_visibility;
-
-document.getElementById("buttonage").onclick = toggle_visibility;
+$('#buttonten').on('click', toggleVisibility);
+$('#buttonage').on('click', toggleVisibility);
