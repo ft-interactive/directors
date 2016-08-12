@@ -119,7 +119,7 @@ gulp.task('html', done => {
 
 	gulp.src('client/**/*.html')
 		.pipe(assets)
-		.pipe($.if('*.js', $.uglify({output: {inline_script: true}}))) // eslint-disable-line camelcase
+		// .pipe($.if('*.js', $.uglify({output: {inline_script: true}}))) // eslint-disable-line camelcase
 		.pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
 		.pipe(assets.restore())
 		.pipe($.useref())
