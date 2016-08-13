@@ -962,6 +962,12 @@ article{
   .video-player {
     height: 300px;
   }
+}
+
+@media (max-width: 700px) {
+  .table-heading {
+    padding: 1.75em 2em .75em 2em;  
+  }
 
 }
 
@@ -1030,9 +1036,7 @@ article{
     line-height: 21px;
   }
 
-  .table-heading {
-    padding: 1.75em 2em .75em 2em;  
-  }
+  
 
 }
 
@@ -1048,7 +1052,21 @@ article{
   .video-player {
     height: 250px;
   }
+ 
+ .button {    
+    padding: 10px 22px;
+    margin: 5px;
+  }
 
+.showten#top10 .button#buttonten,
+#top10:not(.showten) .button#buttonage { //active 
+    padding: 10px 22px;
+    margin: 10px;
+  }
+
+  .table-heading {
+    padding: 1.75em .75em .75em .75em;  
+  }
 
 }
 
