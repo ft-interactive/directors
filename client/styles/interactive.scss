@@ -1,4 +1,8 @@
-.ui-autocomplete {
+.o-grid-container {
+	max-width: 1920px !important;
+}
+
+ui-autocomplete {
 	max-height: 200px;
 	overflow-y: auto;
 	/* prevent horizontal scrollbar */
@@ -6,26 +10,33 @@
 }
 
 #explore-interactive {
-	margin: 2.0rem auto 10px;
-    max-width: 980px;
+	// margin: 2.0rem auto 10px;
+    // max-width: 980px;
+    width: 100%;
+    font-size: 28px;
+    // width: 1920px;
+    margin: 500px 0;
 
     h2 {
-    	max-width: 980px;
+    	max-width: 1920px;
+    	font-size: 1.3em;
+    	line-height: 1.2em;
     }
 
     p {
-    	max-width: 980px;
+    	max-width: 1920px;
+    	font-size: 1em;
     }
 
     input {
-    	width: 250px;
+    	width: 500px;
     	margin: 1em 0 0 0;
     	font-size: 1.3em;
     }
 
     #interactive-search-suggestions {
     	margin-top: 0em;
-    	font-size: 14px;
+    	font-size: 0.8em;
     	font-family: MetricWeb, sans-serif;
     	text-align: left;
     	max-width: 920px;
@@ -47,7 +58,7 @@
     }
 
     button {
-    	// font-size: 1.3em;
+    	font-size: 1em;
     	line-height: 1.3em;
     	vertical-align: bottom;
     }
@@ -94,7 +105,7 @@
 
 			.bar-labels {
 				stroke: #333;
-				font-size: 14px;
+				font-size: 0.8em;
 				font-weight: 400;
 			}
 
@@ -102,13 +113,13 @@
 				font-weight: 100;
 			}
 
-			.bar-lines {
+			.bar-lines {;
 				stroke: #333;
 			}
 
 			.tick {
 				font-family: MetricWeb, sans-serif;
-				font-size: 14px;
+				font-size: 1.5em;
 				stroke: #777;
 				font-weight: 100;
 			}
@@ -116,13 +127,14 @@
 
 		.xAxisLabel {
 			color: #777;
+			font-size: 0.8em;
 		}
 	}
 
 	.sourceline {
 		margin-bottom: 3em;
 		color: #777;
-		font-size: 14px;
+		font-size: 0.8em;
 	}
 }
 
