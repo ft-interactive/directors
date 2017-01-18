@@ -1,4 +1,6 @@
-# Clone of [The corporate jet files](https://ig.ft.com/sites/business-jets/)
+# US Board composition
+
+A [story](https://ig.ft.com/sites/us-board-diversity/) by [Jennifer Bissel](https://www.ft.com/stream/authorsId/Q0ItOTUzNWFmZg==-QXV0aG9ycw==) based on a clone of of [the corporate jet files](https://ig.ft.com/sites/business-jets/).
 
 ## Uses Starter Kit
 
